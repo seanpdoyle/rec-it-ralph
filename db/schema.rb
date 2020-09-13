@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_13_163832) do
+ActiveRecord::Schema.define(version: 2020_09_13_164134) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "citext"
   enable_extension "plpgsql"
 
   create_table "action_text_rich_texts", force: :cascade do |t|
@@ -51,6 +52,39 @@ ActiveRecord::Schema.define(version: 2020_09_13_163832) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "attractions", force: :cascade do |t|
+    t.citext "name", null: false
+  end
+
+  create_table "cafes", force: :cascade do |t|
+    t.citext "name", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "locatable_type", null: false
+    t.bigint "locatable_id", null: false
+    t.citext "line1", null: false
+    t.citext "line2"
+    t.citext "city", null: false
+    t.citext "state", null: false
+    t.citext "postal_code", null: false
+    t.citext "country", default: "US", null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["latitude", "longitude"], name: "index_locations_on_latitude_and_longitude"
+    t.index ["locatable_type", "locatable_id"], name: "index_locations_on_locatable_type_and_locatable_id"
+  end
+
+  create_table "offices", force: :cascade do |t|
+    t.citext "name", null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.citext "name", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

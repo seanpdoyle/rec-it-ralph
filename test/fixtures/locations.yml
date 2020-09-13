@@ -1,0 +1,38 @@
+culture_espresso:
+  city: "New York"
+  country: "US"
+  latitude: 40.7519536
+  line1: "72 W 38th St."
+  locatable: $LABEL (Cafe)
+  longitude: -73.9858097
+  postal_code: "10018"
+  state: "NY"
+
+staten_island_mall:
+  city: "Staten Island"
+  latitude: 40.613293
+  line1: "2655 Richmond Ave"
+  locatable: $LABEL (Attraction)
+  longitude: -74.157653
+  postal_code: "10314"
+  state: "NY"
+
+superiority_burger:
+  city: "New York"
+  latitude: 40.7274633
+  line1: "430 E 9th St"
+  locatable: $LABEL (Restaurant)
+  longitude: -73.9834821
+  postal_code: "10009"
+  state: "NY"
+
+thoughtbot_nyc:
+  city: "New York"
+  country: "US"
+  latitude: 40.752552
+  line1: "1384 Broadway"
+  line2: "Floor 20"
+  locatable: $LABEL (Office)
+  longitude: -73.987007
+  postal_code: "10018"
+  state: "NY"
