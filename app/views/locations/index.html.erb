@@ -1,0 +1,13 @@
+<section>
+  <p><%= pluralize locations.size, "result"  %></p>
+
+  <ul>
+    <% locations.each do |location| %>
+      <li>
+        <%= link_to location_path(location) do %>
+          <h2><%= location.name %></h2>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</section>

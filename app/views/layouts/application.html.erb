@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RecItRalph</title>
+    <title><%= yield(:document_title).presence || "Rec-it-Ralph" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

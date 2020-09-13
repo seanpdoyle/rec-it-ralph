@@ -1,0 +1,20 @@
+<% content_for(:document_title, location.name) %>
+
+<section>
+  <div>
+    <h1><%= location.name %></h1>
+  </div>
+
+  <address>
+    <p><%= location.line1 %></p>
+    <% if location.line2? %>
+    <p><%= location.line2 %></p>
+    <% end %>
+    <p><%= location.city %>, <%= location.state %> <%= location.postal_code %></p>
+  </address>
+
+  <dl>
+    <dt>Tags</dt>
+    <dd><%= location.locatable_name.titleize %></dd>
+  </dl>
+</section>
