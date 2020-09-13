@@ -17,4 +17,34 @@ class LocationTest < ActiveSupport::TestCase
     assert_equal thoughtbot_nyc.latitude, latitude
     assert_equal thoughtbot_nyc.longitude, longitude
   end
+
+  test "#nearby excludes the Location" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+
+    nearby = thoughtbot_nyc.nearby
+
+    assert_not_includes nearby, thoughtbot_nyc.location
+  end
+
+  test "#nearby returns other Locations" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+    culture_espresso = cafes(:culture_espresso)
+    staten_island_mall = attractions(:staten_island_mall)
+
+    nearby = thoughtbot_nyc.nearby
+
+    assert_includes nearby, culture_espresso.location
+    assert_includes nearby, staten_island_mall.location
+  end
+
+  test "#nearby accepts a range and unit for filtering" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+    culture_espresso = cafes(:culture_espresso)
+    staten_island_mall = attractions(:staten_island_mall)
+
+    nearby = thoughtbot_nyc.nearby(1, unit: :mi)
+
+    assert_includes nearby, culture_espresso.location
+    assert_not_includes nearby, staten_island_mall.location
+  end
 end

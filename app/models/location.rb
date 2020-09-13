@@ -7,6 +7,10 @@ class Location < ApplicationRecord
 
   delegate :name, to: :locatable
 
+  def nearby(*arguments)
+    Location.near(self, *arguments).where.not(id: self)
+  end
+
   def address
     [ line1, city, state, postal_code, country ].join(", ")
   end
