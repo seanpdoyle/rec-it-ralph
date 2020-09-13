@@ -14,12 +14,10 @@ end
 
 class ActionDispatch::IntegrationTest
   def assert_text(text)
-    matching =
-      case text
-      when Regexp then text
-      else /#{text.squish}/
-      end
+    assert_includes document_root_element.text.squish, text.squish
+  end
 
-    assert_match matching, document_root_element.text.squish
+  def assert_no_text(text)
+    assert_not_includes document_root_element.text.squish, text.squish
   end
 end

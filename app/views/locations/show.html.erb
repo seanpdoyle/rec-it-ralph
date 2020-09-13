@@ -29,5 +29,16 @@
 
     <dt>Tags</dt>
     <dd><%= location.locatable_name.titleize %></dd>
+
+    <% location.nearby(1, unit: :mi).tap do |nearby_locations| %>
+      <% if nearby_locations.any? %>
+        <dt>Nearby<dt>
+        <dd>
+          <ul>
+            <%= render layout: "li", partial: nearby_locations %>
+          </ul>
+        </dd>
+      <% end %>
+    <% end %>
   </dl>
 </section>

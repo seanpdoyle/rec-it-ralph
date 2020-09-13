@@ -1,10 +1,15 @@
 require "test_helper"
 
 class LocationsControllerTest < ActionDispatch::IntegrationTest
+  include ActionView::Helpers::TextHelper
+
   test "#index includes the number of results" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+    nearby_locations = thoughtbot_nyc.nearby(1, unit: :mi)
+
     get root_path
 
-    assert_text /\d+ results/
+    assert_text pluralize(nearby_locations.size + 1, "result")
   end
 
   test "#index includes information about the Locations' creators" do
@@ -37,5 +42,24 @@ class LocationsControllerTest < ActionDispatch::IntegrationTest
 
     assert_text thoughtbot_nyc.name
     assert_text thoughtbot_nyc.creator.name
+  end
+
+  test "#show renders other nearby Locations" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+    culture_espresso = cafes(:culture_espresso)
+    staten_island_mall = attractions(:staten_island_mall)
+
+    get location_path(thoughtbot_nyc.location)
+
+    assert_text culture_espresso.name
+    assert_no_text staten_island_mall.name
+  end
+
+  test "#hides the nearby header when there are no nearby Locations" do
+    staten_island_mall = attractions(:staten_island_mall)
+
+    get location_path(staten_island_mall.location)
+
+    assert_select "dt", count: 0, text: "Nearby"
   end
 end
