@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_13_164134) do
+ActiveRecord::Schema.define(version: 2020_09_13_225956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "citext"
@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2020_09_13_164134) do
     t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "creator_id", null: false
+    t.index ["creator_id"], name: "index_locations_on_creator_id"
     t.index ["latitude", "longitude"], name: "index_locations_on_latitude_and_longitude"
     t.index ["locatable_type", "locatable_id"], name: "index_locations_on_locatable_type_and_locatable_id"
   end
@@ -87,6 +89,15 @@ ActiveRecord::Schema.define(version: 2020_09_13_164134) do
     t.citext "name", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.citext "biography"
+    t.citext "name"
+    t.citext "neighborhood"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "locations", "users", column: "creator_id"
 end

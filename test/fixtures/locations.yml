@@ -1,6 +1,37 @@
+ample_hills:
+  city: "Brooklyn"
+  creator: mike
+  latitude: 40.6786055
+  line1: "623 Vanderbilt Ave"
+  locatable: $LABEL (Attraction)
+  longitude: -73.9683152
+  postal_code: "11238"
+  state: "NY"
+
+baekjeong:
+  city: "New York"
+  creator: kevin
+  latitude: 40.7471506
+  line1: "1 E 32nd St"
+  locatable: $LABEL (Restaurant)
+  longitude: -73.9849969
+  postal_code: "10016"
+  state: "NY"
+
+cho_dang_gol_korean_restaurant:
+  city: "New York"
+  creator: daniel
+  latitude: 40.7502375
+  line1: "55 W 35th St"
+  locatable: $LABEL (Restaurant)
+  longitude: -73.9861972
+  postal_code: "10001"
+  state: "NY"
+
 culture_espresso:
   city: "New York"
   country: "US"
+  creator: ralph
   latitude: 40.7519536
   line1: "72 W 38th St."
   locatable: $LABEL (Cafe)
@@ -8,8 +39,49 @@ culture_espresso:
   postal_code: "10018"
   state: "NY"
 
+f_and_f_pizzeria:
+  city: "Brooklyn"
+  creator: ralph
+  latitude: 40.675986
+  line1: "459 Court Street"
+  locatable: $LABEL (Restaurant)
+  longitude: -73.999214
+  postal_code: "11231"
+  state: "NY"
+
+getaway:
+  city: "Brooklyn"
+  creator: christina
+  latitude: 40.650002
+  line1: "158 Green St"
+  locatable: $LABEL (Restaurant)
+  longitude: -73.949997
+  postal_code: "11222"
+  state: "NY"
+
+gossip_coffee:
+  city: "Astoria"
+  creator: jesse
+  latitude: 40.730610
+  line1: "3704 30th Ave"
+  locatable: $LABEL (Cafe)
+  longitude: -73.935242
+  postal_code: "11103"
+  state: "NY"
+
+ribalta:
+  city: "New York"
+  creator: stephanie
+  latitude: 40.7332375
+  line1: "48 E 12th St"
+  locatable: $LABEL (Restaurant)
+  longitude: -73.9915189
+  postal_code: "10003"
+  state: "NY"
+
 staten_island_mall:
   city: "Staten Island"
+  creator: elisa
   latitude: 40.613293
   line1: "2655 Richmond Ave"
   locatable: $LABEL (Attraction)
@@ -19,6 +91,7 @@ staten_island_mall:
 
 superiority_burger:
   city: "New York"
+  creator: sean
   latitude: 40.7274633
   line1: "430 E 9th St"
   locatable: $LABEL (Restaurant)
@@ -35,4 +108,5 @@ thoughtbot_nyc:
   locatable: $LABEL (Office)
   longitude: -73.987007
   postal_code: "10018"
+  creator: ralph
   state: "NY"

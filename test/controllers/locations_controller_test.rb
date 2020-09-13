@@ -4,7 +4,16 @@ class LocationsControllerTest < ActionDispatch::IntegrationTest
   test "#index includes the number of results" do
     get root_path
 
-    assert_text "2 results"
+    assert_text /\d+ results/
+  end
+
+  test "#index includes information about the Locations' creators" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+
+    get root_path
+
+    assert_text thoughtbot_nyc.name
+    assert_text thoughtbot_nyc.creator.name
   end
 
   test "#show includes relevant information" do
@@ -21,7 +30,12 @@ class LocationsControllerTest < ActionDispatch::IntegrationTest
     assert_text culture_espresso.locatable_name.titleize
   end
 
-  def assert_text(text)
-    assert_includes document_root_element.text.squish, text.squish
+  test "#show includes information about a Location's creator" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+
+    get location_path(thoughtbot_nyc.location)
+
+    assert_text thoughtbot_nyc.name
+    assert_text thoughtbot_nyc.creator.name
   end
 end

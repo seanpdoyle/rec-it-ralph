@@ -19,4 +19,16 @@ class LocationsTest < ApplicationSystemTestCase
 
     assert_text culture_espresso.name
   end
+
+  test "views a User's recommended Locations" do
+    culture_espresso = cafes(:culture_espresso)
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+
+    visit location_path(culture_espresso.location)
+    click_on culture_espresso.creator.name, match: :first
+
+    assert_text culture_espresso.creator.name
+    assert_text culture_espresso.name
+    assert_text thoughtbot_nyc.name
+  end
 end

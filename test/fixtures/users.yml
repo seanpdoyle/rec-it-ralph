@@ -1,0 +1,33 @@
+christina:
+  name: "Christina Entcheva"
+
+daniel:
+  name: "Daniel Colson"
+  neighborhood: "Brooklyn"
+
+elisa:
+  name: "Elisa Verna"
+
+jesse:
+  name: "Jesse Bailey"
+
+kevin:
+  name: "Kevin Kwon"
+
+mike:
+  name: "Mike Burns"
+  neighborhood: "Brooklyn"
+
+ralph:
+  biography: "The Friendly Robot 🤖"
+  name: "Ralph"
+  neighborhood: "Midtown"
+
+sean:
+  biography: "👋"
+  name: "Sean Doyle"
+  neighborhood: "East Village"
+
+stephanie:
+  name: "Stephanie Kuroda"
+  neighborhood: "Manhattan"

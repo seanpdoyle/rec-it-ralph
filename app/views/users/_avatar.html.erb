@@ -1,0 +1,10 @@
+<% render(formats: :svg, layout: "image", partial: avatar.record).tap do |fallback| %>
+  <% if avatar.attached? %>
+    <%= image_tag avatar.variant(resize_to_fit: [128, 128]), {
+      "data-controller": "image",
+      "data-image-fallback-value": data_uri(fallback, format: :svg),
+    } %>
+  <% else %>
+    <%= fallback %>
+  <% end %>
+<% end %>
