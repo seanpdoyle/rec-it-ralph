@@ -14,6 +14,19 @@
   </address>
 
   <dl>
+    <dt>Recommended by</dt>
+    <dd>
+      <% location.creator.tap do |creator| %>
+        <%= link_to user_path(creator) do %>
+          <span><%= creator.name %></span>
+          <%= render "users/avatar", avatar: creator.avatar %>
+
+          <span><%= simple_format creator.biography %></span>
+          <span>Read More →</span>
+        <% end %>
+      <% end %>
+    </dd>
+
     <dt>Tags</dt>
     <dd><%= location.locatable_name.titleize %></dd>
   </dl>

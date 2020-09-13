@@ -1,0 +1,22 @@
+<% content_for(:document_title, user.name) %>
+
+<section>
+  <div>
+    <h1><%= user.name %></h1>
+    <%= render "avatar", avatar: user.avatar %>
+
+    <%= simple_format user.biography %>
+  </div>
+
+  <dl>
+    <dd>Home neighborhood</dd>
+    <dt><%= user.neighborhood %></dt>
+
+    <dt>Recommendations</dt>
+    <dd>
+      <ul>
+        <%= render layout: "li", partial: user.created_locations %>
+      </ul>
+    </dd>
+  </dl>
+</section>

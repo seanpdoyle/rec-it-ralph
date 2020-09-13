@@ -1,0 +1,11 @@
+<%= link_to location_path(location) do %>
+  <div>
+    <h2><%= location.name %></h2>
+  </div>
+
+  <div>
+    <%= render "users/avatar", avatar: location.creator.avatar %>
+
+    <span>Recommended by <% location.creator.name %></span>
+  </div>
+<% end %>

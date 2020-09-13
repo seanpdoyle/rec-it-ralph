@@ -1,4 +1,6 @@
 class Location < ApplicationRecord
+  belongs_to :creator, class_name: "User"
+
   geocoded_by :address
 
   delegated_type :locatable, types: %w[ Attraction Cafe Office Restaurant ]
