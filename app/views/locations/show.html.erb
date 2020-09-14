@@ -3,6 +3,8 @@
 <%= render "sidebar", "data-sliding-drawer-offset-height-value": 50 do %>
   <div class="flex items-center justify-between mb-4">
     <h1 class="font-bold text-brown text-2xl"><%= location.name %></h1>
+
+    <%= render formats: :svg, layout: "image", partial: location, locals: { class: "h-12 w-12" } %>
   </div>
 
   <address class="mb-4 not-italic text-brown-lighter">
@@ -52,4 +54,4 @@
   </dl>
 <% end %>
 
-<%= render "map" %>
+<%= render "map", center: location.to_coordinates, locations: [ location ] + location.nearby(1, unit: :mi) %>
