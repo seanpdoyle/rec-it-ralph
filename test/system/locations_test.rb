@@ -7,8 +7,14 @@ class LocationsTest < ApplicationSystemTestCase
 
     visit root_path
 
-    assert_text thoughtbot_nyc.name
-    assert_text culture_espresso.name
+    within_sidebar do
+      assert_link thoughtbot_nyc.name
+      assert_link culture_espresso.name
+    end
+    within_map do
+      assert_link thoughtbot_nyc.name
+      assert_link culture_espresso.name
+    end
   end
 
   test "views a Location" do
@@ -17,7 +23,12 @@ class LocationsTest < ApplicationSystemTestCase
     visit root_path
     click_on culture_espresso.name
 
-    assert_text culture_espresso.name
+    within_sidebar do
+      assert_text culture_espresso.name
+    end
+    within_map do
+      assert_link culture_espresso.name
+    end
   end
 
   test "views a User's recommended Locations" do
@@ -27,9 +38,35 @@ class LocationsTest < ApplicationSystemTestCase
     visit location_path(culture_espresso.location)
     click_on culture_espresso.creator.name, match: :first
 
-    assert_text culture_espresso.creator.name
-    assert_text culture_espresso.name
-    assert_text thoughtbot_nyc.name
+    within_sidebar do
+      assert_text culture_espresso.creator.name
+      assert_link culture_espresso.name
+      assert_link thoughtbot_nyc.name
+    end
+    within_map do
+      assert_link culture_espresso.name
+      assert_link thoughtbot_nyc.name
+    end
+  end
+
+  test "visits a Location by clicking its map marker" do
+    culture_espresso = cafes(:culture_espresso)
+
+    visit root_path
+    within_map { click_on culture_espresso.name }
+
+    within_sidebar do
+      assert_text culture_espresso.name
+      assert_no_link culture_espresso.name
+    end
+  end
+
+  def within_sidebar(&block)
+    within "main > section:first-of-type", &block
+  end
+
+  def within_map(&block)
+    within ".leaflet-container", &block
   end
 
   test "renders Locations attached to a Recommendation's Rich Text" do

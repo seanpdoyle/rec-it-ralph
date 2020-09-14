@@ -1,6 +1,8 @@
 <%= render "card_link", url: location_path(location), class: "space-y-2" do %>
   <div class="flex items-center justify-between">
     <h2 class="font-bold text-xl truncate"><%= location.name %></h2>
+
+    <%= render formats: :svg, partial: location, locals: { class: "h-8 w-8" } %>
   </div>
 
   <div class="flex items-center space-x-2">

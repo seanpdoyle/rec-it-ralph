@@ -6,6 +6,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.1.1",
+    "leaflet": "^1.7.1",
     "stimulus": "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/stimulus.tar.gz",
     "tailwindcss": "^1.8.9",
     "turbolinks": "^5.2.0",

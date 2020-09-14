@@ -1,3 +1,4 @@
 <%= link_to location_path(office.location), class: "underline" do %>
+  <%= image_tag location_path(office.location, format: :svg), class: "inline w-6" %>
   <%= office.name %>
 <% end %>

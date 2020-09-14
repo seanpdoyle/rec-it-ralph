@@ -1,1 +1,10 @@
-<aside class="bg-gray-500 absolute inset-0 z-0 md:relative md:w-1/2 lg:w-3/4"></aside>
+<%= tag.aside class: "absolute inset-0 z-0 md:relative md:w-1/2 lg:w-3/4", data: {
+  controller: "leaflet",
+  leaflet_configuration_value: Rails.application.config_for(:leaflet),
+  leaflet_center_values: local_assigns[:center].to_a,
+  leaflet_geo_json_value: render(formats: :geojson, partial: "map", locals: local_assigns),
+} do %>
+  <template data-leaflet-target="template">
+    <%= render formats: :svg, layout: "locations/marker", partial: locations %>
+  </template>
+<% end %>
