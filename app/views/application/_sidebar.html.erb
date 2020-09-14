@@ -1,3 +1,45 @@
-<section class="bg-cream-lighter p-4 w-full md:w-1/4">
-  <%= yield %>
-</section>
+<details class="md:w-1/2 lg:w-1/4 z-10" open>
+  <summary class="
+    bg-cream
+    bg-opacity-75
+    border-2
+    border-clementine
+    bottom-0
+    cursor-pointer
+    fixed
+    flex
+    flex-row
+    focus:shadow-outline
+    h-8
+    hover:shadow-outline
+    items-center
+    justify-center
+    left-1/2
+    list-none
+    mb-8
+    md:hidden
+    outline-none
+    rounded-full
+    text-sm
+    transform
+    -translate-x-1/2
+  ">
+    <div class="hidden open:flex items-center">
+      <%= safe_join [
+        tag.span("List", class: "bg-clementine text-cream rounded-l-full px-5 py-1"),
+        tag.span("Map", class: "text-clementine rounded-r-full px-5 py-1"),
+      ] %>
+    </div>
+
+    <div class="open:hidden flex items-center">
+      <%= safe_join [
+        tag.span("List", class: "text-clementine rounded-l-full px-5 py-1"),
+        tag.span("Map", class: "bg-clementine text-cream rounded-r-full px-5 py-1"),
+      ] %>
+    </div>
+  </summary>
+
+  <section class="bg-cream-lighter p-4 pb-24 md:pb-auto min-h-screen-minus-header overflow-y-auto">
+    <%= yield %>
+  </div>
+</details>
