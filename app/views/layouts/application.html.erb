@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= yield(:document_title).presence || "Rec-it-Ralph" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +10,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-cream-lighter flex flex-col items-stretch min-h-screen">
+    <%= render "header" %>
+
+    <main class="flex flex-col md:flex-row flex-grow relative">
+      <%= yield %>
+    </main>
   </body>
 </html>

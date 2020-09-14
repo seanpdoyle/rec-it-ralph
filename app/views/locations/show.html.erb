@@ -1,11 +1,11 @@
 <% content_for(:document_title, location.name) %>
 
-<section>
-  <div>
-    <h1><%= location.name %></h1>
+<%= render "sidebar" do %>
+  <div class="mb-4">
+    <h1 class="font-bold text-brown text-2xl"><%= location.name %></h1>
   </div>
 
-  <address>
+  <address class="mb-4 not-italic text-brown-lighter">
     <p><%= location.line1 %></p>
     <% if location.line2? %>
     <p><%= location.line2 %></p>
@@ -13,37 +13,43 @@
     <p><%= location.city %>, <%= location.state %> <%= location.postal_code %></p>
   </address>
 
-  <dl>
-    <dt>Recommended by</dt>
-    <dd>
+  <dl class="text-brown">
+    <dt class="font-bold mb-2">Recommended by</dt>
+    <dd class="mb-2">
       <% location.creator.tap do |creator| %>
-        <%= link_to user_path(creator) do %>
-          <span><%= creator.name %></span>
-          <%= render "users/avatar", avatar: creator.avatar %>
+        <%= render "card_link", url: user_path(creator), class: "grid grid-cols-2 gap-4" do %>
+          <span class="font-bold text-xl truncate"><%= creator.name %></span>
 
-          <span><%= simple_format creator.biography %></span>
-          <span>Read More →</span>
+          <%= render "users/avatar", avatar: creator.avatar, alt: creator.name, class: "place-self-end w-8" %>
+
+          <span class="text-sm"><%= simple_format creator.biography %></span>
+
+          <span class="place-self-end text-sm">Read More →</span>
         <% end %>
       <% end %>
     </dd>
 
     <% if location.recommendations.any? %>
-    <dt>Recommendation</dt>
-    <dd><%= location.recommendations.first.content %></dd>
+    <dt class="sr-only">Recommendation</dt>
+    <dd class="mb-2 text-brown"><%= location.recommendations.first.content %></dd>
     <% end %>
 
-    <dt>Tags</dt>
-    <dd><%= location.locatable_name.titleize %></dd>
+    <dt class="font-bold mb-2">Tags</dt>
+    <dd class="mb-2 text-sm">
+      <span class="bg-white px-2 py-1 rounded-full"><%= location.locatable_name.titleize %></span>
+    </dd>
 
     <% location.nearby(1, unit: :mi).tap do |nearby_locations| %>
       <% if nearby_locations.any? %>
-        <dt>Nearby<dt>
-        <dd>
-          <ul>
+        <dt class="font-bold mb-2">Nearby<dt>
+        <dd class="mb-2">
+          <ul class="space-y-2">
             <%= render layout: "li", partial: nearby_locations %>
           </ul>
         </dd>
       <% end %>
     <% end %>
   </dl>
-</section>
+<% end %>
+
+<%= render "map" %>

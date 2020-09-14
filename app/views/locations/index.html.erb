@@ -1,7 +1,9 @@
-<section>
-  <p><%= pluralize locations.size, "result"  %></p>
+<%= render "sidebar" do %>
+  <p class="mb-4"><%= pluralize locations.size, "result"  %></p>
 
-  <ul>
+  <ul class="space-y-2">
     <%= render layout: "li", partial: locations %>
   </ul>
-</section>
+<% end %>
+
+<%= render "map" %>

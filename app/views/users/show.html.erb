@@ -1,22 +1,23 @@
 <% content_for(:document_title, user.name) %>
 
-<section>
-  <div>
-    <h1><%= user.name %></h1>
-    <%= render "avatar", avatar: user.avatar %>
-
+<%= render "sidebar" do %>
+  <div class="grid grid-cols-2 mb-4">
+    <h1 class="font-bold text-brown text-2xl"><%= user.name %></h1>
+    <%= render "avatar", avatar: user.avatar, class: "place-self-end w-16", width: 64, height: 64 %>
     <%= simple_format user.biography %>
   </div>
 
-  <dl>
-    <dd>Home neighborhood</dd>
-    <dt><%= user.neighborhood %></dt>
+  <dl class="text-brown">
+    <dt class="font-bold mb-2">Home neighborhood</dt>
+    <dd><%= user.neighborhood %></dd>
 
-    <dt>Recommendations</dt>
+    <dt class="font-bold mb-2">Recommendations</dt>
     <dd>
-      <ul>
+      <ul class="space-y-2">
         <%= render layout: "li", partial: user.created_locations %>
       </ul>
     </dd>
   </dl>
-</section>
+<% end %>
+
+<%= render "map" %>
