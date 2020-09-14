@@ -1,4 +1,6 @@
 class Location < ApplicationRecord
+  has_many :recommendations
+
   belongs_to :creator, class_name: "User"
 
   geocoded_by :address

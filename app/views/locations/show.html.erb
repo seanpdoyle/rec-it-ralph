@@ -27,6 +27,11 @@
       <% end %>
     </dd>
 
+    <% if location.recommendations.any? %>
+    <dt>Recommendation</dt>
+    <dd><%= location.recommendations.first.content %></dd>
+    <% end %>
+
     <dt>Tags</dt>
     <dd><%= location.locatable_name.titleize %></dd>
 
