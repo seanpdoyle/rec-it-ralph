@@ -1,9 +1,13 @@
-<% render(formats: :svg, layout: "image", partial: avatar.record).tap do |fallback| %>
+<% classes = class_names("rounded-full", local_assigns[:class]) %>
+<% attributes = local_assigns.except(:avatar, :class) %>
+
+<% render(formats: :svg, layout: "image", partial: avatar.record, locals: attributes.merge(class: classes)).tap do |fallback| %>
   <% if avatar.attached? %>
-    <%= image_tag avatar.variant(resize_to_fit: [128, 128]), {
+    <%= image_tag avatar.variant(resize_to_fit: [128, 128]), attributes.with_defaults(
+      class: classes,
       "data-controller": "image",
       "data-image-fallback-value": data_uri(fallback, format: :svg),
-    } %>
+    ) %>
   <% else %>
     <%= fallback %>
   <% end %>

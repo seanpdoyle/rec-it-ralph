@@ -1,11 +1,11 @@
-<%= link_to location_path(location) do %>
-  <div>
-    <h2><%= location.name %></h2>
+<%= render "card_link", url: location_path(location), class: "space-y-2" do %>
+  <div class="flex items-center justify-between">
+    <h2 class="font-bold text-xl truncate"><%= location.name %></h2>
   </div>
 
-  <div>
-    <%= render "users/avatar", avatar: location.creator.avatar %>
+  <div class="flex items-center space-x-2">
+    <%= render "users/avatar", avatar: location.creator.avatar, alt: location.creator.name, class: "w-8" %>
 
-    <span>Recommended by <% location.creator.name %></span>
+    <span class="text-clementine-lighter text-sm">Recommended by <%= location.creator.name %></span>
   </div>
 <% end %>
