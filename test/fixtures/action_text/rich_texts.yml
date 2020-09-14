@@ -1,0 +1,20 @@
+ralph_thoughtbot_nyc_recommendation:
+  record: ralph_thoughtbot_nyc (Recommendation)
+  name: content
+  body: >
+    <div><strong>Description</strong></div>
+    <div>Home base!</div>
+    <div>It's a spacious office high up on the twentieth floor</div>
+
+    <div><strong>Highlights</strong></div>
+    <div>Cold brew on tap and a view of the Empire State Building.</div>
+
+sean_culture_espresso_recommendation:
+  record: sean_culture_espresso (Recommendation)
+  name: content
+  body: >
+    <div><strong>Description</strong></div>
+    <div>Strong coffee, warm 🍪</div>
+
+    <div><strong>Highlights</strong></div>
+    <div>It's a block away from <%= ActionText::FixtureSet.attachment("offices", :thoughtbot_nyc) %></div>

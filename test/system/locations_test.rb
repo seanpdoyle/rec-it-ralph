@@ -31,4 +31,19 @@ class LocationsTest < ApplicationSystemTestCase
     assert_text culture_espresso.name
     assert_text thoughtbot_nyc.name
   end
+
+  test "renders Locations attached to a Recommendation's Rich Text" do
+    culture_espresso = cafes(:culture_espresso)
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+
+    visit location_path(culture_espresso.location)
+    within_recommendations { click_on thoughtbot_nyc.name }
+
+    assert_text thoughtbot_nyc.name
+    assert_text thoughtbot_nyc.line1
+  end
+
+  def within_recommendations(&block)
+    within "dl", &block
+  end
 end

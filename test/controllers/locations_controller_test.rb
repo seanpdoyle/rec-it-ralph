@@ -44,6 +44,15 @@ class LocationsControllerTest < ActionDispatch::IntegrationTest
     assert_text thoughtbot_nyc.creator.name
   end
 
+  test "#show renders the latest Recommendation" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+    recommendation = recommendations(:ralph_thoughtbot_nyc)
+
+    get location_path(thoughtbot_nyc.location)
+
+    assert_text recommendation.content.to_plain_text
+  end
+
   test "#show renders other nearby Locations" do
     thoughtbot_nyc = offices(:thoughtbot_nyc)
     culture_espresso = cafes(:culture_espresso)
