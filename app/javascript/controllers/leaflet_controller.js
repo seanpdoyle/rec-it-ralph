@@ -3,15 +3,17 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "template" ]
   static values = {
-    center: Array,
     configuration: Object,
     geoJson: Object,
+  }
+
+  initialize() {
+    this.dispatchEvent = this.dispatchEvent.bind(this)
   }
 
   connect() {
     const {
       element,
-      centerValues,
       configurationValue,
       geoJsonValue,
       templateTarget,
@@ -32,10 +34,27 @@ export default class extends Controller {
     })
 
     this.map.addLayer(geoJsonLayer)
-    this.map.fitBounds(geoJsonLayer.getBounds())
 
-    if (centerValues.length) {
-      this.map.panTo(centerValues, { animate: false })
+    if (geoJsonValue?.bbox) {
+      const [ west, south, east, north ] = geoJsonValue.bbox
+      const bounds = L.latLngBounds([ south, west ], [ north, east ])
+
+      this.map.fitBounds(bounds, { animate: false })
     }
+
+    this.map.on("movestart", this.dispatchEvent)
+    this.map.on("moveend", this.dispatchEvent)
+  }
+
+  disconnect() {
+    this.map.off("movestart", this.dispatchEvent)
+    this.map.off("moveend", this.dispatchEvent)
+  }
+
+  dispatchEvent(detail, { bubbles = true, cancelable = true } = {}) {
+    const type = `${this.identifier}:${detail.type}`
+    const customEvent = new CustomEvent(type, { detail, bubbles, cancelable })
+
+    document.dispatchEvent(customEvent)
   }
 }

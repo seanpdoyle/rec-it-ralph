@@ -1,0 +1,20 @@
+<% builder = local_assigns.delete(:builder) || tag %>
+<% tag_name = local_assigns.delete(:tag_name) || :button %>
+<% class_name = local_assigns.delete(:class) %>
+
+<%= builder.public_send tag_name, yield, name: :submit, class: "
+  bg-cream
+  border-2
+  cursor-pointer
+  flex
+  flex-row
+  focus:shadow-outline
+  hover:shadow-outline
+  items-center
+  outline-none
+  rounded-full
+  space-x-2
+  text-clementine
+  whitespace-no-wrap
+  #{class_name}
+", **local_assigns %>
