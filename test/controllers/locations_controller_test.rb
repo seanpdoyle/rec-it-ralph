@@ -21,6 +21,43 @@ class LocationsControllerTest < ActionDispatch::IntegrationTest
     assert_text thoughtbot_nyc.creator.name
   end
 
+  test "#index filters results by a bounding box" do
+    culture_espresso = cafes(:culture_espresso)
+    gossip_coffee = cafes(:gossip_coffee)
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+    bounds = BoundingBox.from_locations([
+      culture_espresso,
+      gossip_coffee,
+    ])
+
+    get root_path, params: {bounds: bounds.to_param}
+
+    assert_text culture_espresso.name
+    assert_text gossip_coffee.name
+    assert_no_text thoughtbot_nyc.name
+  end
+
+  test "#index with invalid bounds centers on the Current office" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+    staten_island_mall = attractions(:staten_island_mall)
+
+    get root_path, params: {bounds: "junk,junk,junk,junk"}
+
+    assert_text thoughtbot_nyc.name
+    assert_no_text staten_island_mall.name
+  end
+
+  test "#index with no results mentions it and displays a result for the Current office" do
+    thoughtbot_nyc = offices(:thoughtbot_nyc)
+
+    get root_path, params: {bounds: "10,20,30,40"}
+
+    assert_select "main > section:first-of-type" do
+      assert_text "It looks like there's nothing in this area"
+      assert_text thoughtbot_nyc.name
+    end
+  end
+
   test "#show includes relevant information" do
     culture_espresso = cafes(:culture_espresso)
 

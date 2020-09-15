@@ -54,4 +54,4 @@
   </dl>
 <% end %>
 
-<%= render "map", center: location.to_coordinates, locations: [ location ] + location.nearby(1, unit: :mi) %>
+<%= render "map", bounding_box: bounding_box, locations: [ location ] + location.nearby(1, unit: :mi) %>

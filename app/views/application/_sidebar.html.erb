@@ -18,23 +18,12 @@
   **local_assigns
 ) do %>
   <div class="flex justify-center">
-    <%= tag.button \
+    <%= render "button",
       class: "
-        bg-cream
-        border-2
         cursor-ns-resize
-        cursor-pointer
-        flex
-        flex-row
-        focus:shadow-outline
         h-8
-        hover:shadow-outline
-        items-center
         justify-center
-        list-none
         md:hidden
-        outline-none
-        rounded-full
       ",
       "data-sliding-drawer-target": "draggable",
       "data-action": "

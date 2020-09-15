@@ -4,8 +4,8 @@
   <p class="mb-4"><%= pluralize locations.size, "result"  %></p>
 
   <ul class="space-y-2">
-    <%= render layout: "li", partial: locations %>
+    <%= render(layout: "li", partial: locations) || render(partial: "locations/empty", layout: "li") %>
   </ul>
 <% end %>
 
-<%= render "map", locations: locations %>
+<%= render "map", locations: locations, bounding_box: bounding_box %>
