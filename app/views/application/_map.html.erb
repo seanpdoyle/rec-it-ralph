@@ -28,13 +28,17 @@
     </div>
   <% end %>
 
-  <%= tag.div(class: "h-screen-minus-header z-0",
-    "data-controller": "leaflet",
-    "data-leaflet-configuration-value": Rails.application.config_for(:leaflet).to_json,
+  <%= tag.template(
+    "data-leaflet-target": "template",
     "data-leaflet-geo-json-value": render(formats: :geojson, partial: "map", locals: local_assigns),
   ) do %>
-    <template data-leaflet-target="template">
-      <%= render formats: :svg, layout: "locations/marker", partial: locations %>
-    </template>
+    <%= render formats: :svg, layout: "locations/marker", partial: locations %>
   <% end %>
+
+  <%= tag.div(id: "leaflet-map", class: "h-screen-minus-header z-0",
+    "data-controller": "leaflet",
+    "data-leaflet-template-selector-value": %([data-leaflet-target="template"]),
+    "data-leaflet-configuration-value": Rails.application.config_for(:leaflet).to_json,
+    "data-turbolinks-permanent": true,
+  ) %>
 <% end %>

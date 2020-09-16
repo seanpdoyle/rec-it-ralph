@@ -1,10 +1,10 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "template" ]
   static values = {
     configuration: Object,
-    geoJson: Object,
+    initialized: Boolean,
+    templateSelector: String,
   }
 
   initialize() {
@@ -15,10 +15,11 @@ export default class extends Controller {
     const {
       element,
       configurationValue,
+      initializedValue,
       geoJsonValue,
       templateTarget,
     } = this
-    const { templateUrl, ...options } = configurationValue
+    const { animate, templateUrl, ...options } = configurationValue
 
     this.map = this.map || L.map(element, {
       layers: [ L.tileLayer(templateUrl, options) ]
@@ -39,16 +40,38 @@ export default class extends Controller {
       const [ west, south, east, north ] = geoJsonValue.bbox
       const bounds = L.latLngBounds([ south, west ], [ north, east ])
 
-      this.map.fitBounds(bounds, { animate: false })
+      initializedValue ?
+        this.map.flyToBounds(bounds, { animate }) :
+        this.map.fitBounds(bounds, { animate: false })
     }
 
     this.map.on("movestart", this.dispatchEvent)
     this.map.on("moveend", this.dispatchEvent)
+
+    this.initializedValue = true
   }
 
   disconnect() {
+    const layers = []
+
+    this.map.eachLayer(layer => layers.push(layer))
+
+    const [ tileLayer, ...otherLayers ] = layers
+
+    otherLayers.forEach(layer => this.map.removeLayer(layer))
+
     this.map.off("movestart", this.dispatchEvent)
     this.map.off("moveend", this.dispatchEvent)
+  }
+
+  get templateTarget() {
+    return document.querySelector(this.templateSelectorValue)
+  }
+
+  get geoJsonValue() {
+    const attributeName = `data-${this.identifier}-geo-json-value`
+
+    return JSON.parse(this.templateTarget.getAttribute(attributeName)) || {}
   }
 
   dispatchEvent(detail, { bubbles = true, cancelable = true } = {}) {
