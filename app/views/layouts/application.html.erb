@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1<%= ", viewport-fit=cover" if platform.ios_app? %>">
     <title><%= yield(:document_title).presence || "Rec-it-Ralph" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,7 +16,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg-cream-lighter flex flex-col items-stretch min-h-screen">
+  <body class="bg-cream-lighter flex flex-col items-stretch min-h-screen" data-bridge-platform="<%= platform.bridge_name %>">
     <%= render "header" %>
 
     <main class="flex flex-col md:flex-row relative h-screen-minus-header">
