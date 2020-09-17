@@ -4,6 +4,15 @@
 
 :root {
   --header-height: 0px;
+  --safe-area-inset-top: env(safe-area-inset-top);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-bridge-platform~="ios"] {
+  --header-height: var(--safe-area-inset-top);
 }
 
 .top-offset {
