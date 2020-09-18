@@ -1,4 +1,6 @@
-<%= render "sidebar" do %>
+<%= render "sidebar", "data-sliding-drawer-offset-height-value": 75 do %>
+  <h1 class="sr-only">Search results in the area</h1>
+
   <p class="mb-4"><%= pluralize locations.size, "result"  %></p>
 
   <ul class="space-y-2">

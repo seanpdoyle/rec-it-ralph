@@ -1,6 +1,6 @@
 <% content_for(:document_title, user.name) %>
 
-<%= render "sidebar" do %>
+<%= render "sidebar", "data-sliding-drawer-offset-height-value": 0 do %>
   <div class="grid grid-cols-2 mb-4">
     <h1 class="font-bold text-brown text-2xl"><%= user.name %></h1>
     <%= render "avatar", avatar: user.avatar, class: "place-self-end w-16", width: 64, height: 64 %>

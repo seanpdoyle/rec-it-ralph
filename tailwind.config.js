@@ -17,9 +17,9 @@ module.exports = {
           darker: "#ecdbc6",
         }
       },
-      inset: {
-        "1/2": "50%",
-      }
+      cursor: {
+        "ns-resize": "ns-resize",
+      },
     }
   }
 }
