@@ -1,7 +1,7 @@
 <% content_for(:document_title, location.name) %>
 
-<%= render "sidebar" do %>
-  <div class="mb-4">
+<%= render "sidebar", "data-sliding-drawer-offset-height-value": 50 do %>
+  <div class="flex items-center justify-between mb-4">
     <h1 class="font-bold text-brown text-2xl"><%= location.name %></h1>
   </div>
 
