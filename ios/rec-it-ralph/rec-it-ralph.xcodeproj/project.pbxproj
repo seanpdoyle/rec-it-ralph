@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,10 @@
 		2A958CFF2512E9FB00F048C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A958CFE2512E9FB00F048C1 /* Assets.xcassets */; };
 		2A958D022512E9FB00F048C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A958D012512E9FB00F048C1 /* Preview Assets.xcassets */; };
 		2A958D052512E9FB00F048C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A958D032512E9FB00F048C1 /* LaunchScreen.storyboard */; };
-		2A958D172512F24F00F048C1 /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A958D162512F24F00F048C1 /* Turbolinks.framework */; };
-		2A958D182512F25400F048C1 /* Turbolinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A958D162512F24F00F048C1 /* Turbolinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2A958D1A2512F61C00F048C1 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A958D192512F61C00F048C1 /* ApplicationViewController.swift */; };
+		2ABE68592515BDF0002D99A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE68582515BDF0002D99A8 /* ContentView.swift */; };
+		2ABE685C2515BE0A002D99A8 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 2ABE685B2515BE0A002D99A8 /* SlideOverCard */; };
+		2ABE6860251634AF002D99A8 /* BridgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE685F251634AF002D99A8 /* BridgeController.swift */; };
+		4A3EA3712582A41C0000F98C /* Turbolinks in Frameworks */ = {isa = PBXBuildFile; productRef = 4A3EA3702582A41C0000F98C /* Turbolinks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2A958D182512F25400F048C1 /* Turbolinks.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,8 +39,9 @@
 		2A958D012512E9FB00F048C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A958D042512E9FB00F048C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A958D062512E9FB00F048C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A958D162512F24F00F048C1 /* Turbolinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Turbolinks.framework; path = "rec-it-ralph/Frameworks/Turbolinks.framework"; sourceTree = "<group>"; };
-		2A958D192512F61C00F048C1 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
+		2ABE68582515BDF0002D99A8 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2ABE685F251634AF002D99A8 /* BridgeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeController.swift; sourceTree = "<group>"; };
+		4A3EA36F2582A3500000F98C /* turbolinks-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "turbolinks-ios"; path = "Packages/turbolinks-ios"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A958D172512F24F00F048C1 /* Turbolinks.framework in Frameworks */,
+				2ABE685C2515BE0A002D99A8 /* SlideOverCard in Frameworks */,
+				4A3EA3712582A41C0000F98C /* Turbolinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +63,7 @@
 				2A958CF72512E9F900F048C1 /* rec-it-ralph */,
 				2A958CF62512E9F900F048C1 /* Products */,
 				2A958D0C2512F10900F048C1 /* Frameworks */,
+				4A3EA36E2582A2D60000F98C /* Packages */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,8 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				2A958CF82512E9F900F048C1 /* AppDelegate.swift */,
+				2ABE685F251634AF002D99A8 /* BridgeController.swift */,
+				2ABE68582515BDF0002D99A8 /* ContentView.swift */,
 				2A958CFA2512E9F900F048C1 /* SceneDelegate.swift */,
-				2A958D192512F61C00F048C1 /* ApplicationViewController.swift */,
 				2A958CFE2512E9FB00F048C1 /* Assets.xcassets */,
 				2A958D032512E9FB00F048C1 /* LaunchScreen.storyboard */,
 				2A958D062512E9FB00F048C1 /* Info.plist */,
@@ -97,9 +101,16 @@
 		2A958D0C2512F10900F048C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A958D162512F24F00F048C1 /* Turbolinks.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A3EA36E2582A2D60000F98C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				4A3EA36F2582A3500000F98C /* turbolinks-ios */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +130,10 @@
 			dependencies = (
 			);
 			name = "rec-it-ralph";
+			packageProductDependencies = (
+				2ABE685B2515BE0A002D99A8 /* SlideOverCard */,
+				4A3EA3702582A41C0000F98C /* Turbolinks */,
+			);
 			productName = "rec-it-ralph";
 			productReference = 2A958CF52512E9F900F048C1 /* rec-it-ralph.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 2A958CEC2512E9F900F048C1;
+			packageReferences = (
+				2ABE685A2515BE0A002D99A8 /* XCRemoteSwiftPackageReference "swiftUI-slide-over-card" */,
+			);
 			productRefGroup = 2A958CF62512E9F900F048C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,7 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A958CF92512E9F900F048C1 /* AppDelegate.swift in Sources */,
-				2A958D1A2512F61C00F048C1 /* ApplicationViewController.swift in Sources */,
+				2ABE68592515BDF0002D99A8 /* ContentView.swift in Sources */,
+				2ABE6860251634AF002D99A8 /* BridgeController.swift in Sources */,
 				2A958CFB2512E9F900F048C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,11 +333,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"rec-it-ralph/Preview Content\"";
+				DEVELOPMENT_TEAM = 8E7TQ638ZD;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/rec-it-ralph/Frameworks",
-				);
 				INFOPLIST_FILE = "rec-it-ralph/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,11 +353,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"rec-it-ralph/Preview Content\"";
+				DEVELOPMENT_TEAM = 8E7TQ638ZD;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/rec-it-ralph/Frameworks",
-				);
 				INFOPLIST_FILE = "rec-it-ralph/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +389,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ABE685A2515BE0A002D99A8 /* XCRemoteSwiftPackageReference "swiftUI-slide-over-card" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moifort/swiftUI-slide-over-card.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ABE685B2515BE0A002D99A8 /* SlideOverCard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ABE685A2515BE0A002D99A8 /* XCRemoteSwiftPackageReference "swiftUI-slide-over-card" */;
+			productName = SlideOverCard;
+		};
+		4A3EA3702582A41C0000F98C /* Turbolinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Turbolinks;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A958CED2512E9F900F048C1 /* Project object */;
 }
