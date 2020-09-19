@@ -13,6 +13,19 @@ html {
 
 [data-bridge-platform~="ios"] {
   --header-height: var(--safe-area-inset-top);
+  --top-offset: 0vh;
+}
+
+[data-bridge-platform~="ios"] .ios\:relative {
+  position: relative;
+}
+
+[data-bridge-platform~="ios"] .ios\:hidden {
+  display: none;
+}
+
+[data-bridge-platform~="ios"] .top-offset {
+  top: 0;
 }
 
 .top-offset {
