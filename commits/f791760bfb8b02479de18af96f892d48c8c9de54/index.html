@@ -1,0 +1,2365 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Wire up Rec-It-Ralph-ios</title>
+    <link href="../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../javascripts/site.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__name">
+<a href="../../">          rec-it-ralph
+</a>      </h1>
+
+
+      <nav class="
+        header__navigation
+        navigation
+        
+      ">
+<a href="../c9bb2feb0f1cc5c9e5263f8e04b5e676e620c030/">              &#8592; Previous
+</a>
+<a href="../6891dc5fcde3f046792bf3b85ea2bbe695d599b1/">              Next &#8594;
+</a>      </nav>
+    </header>
+
+    <main class="content">
+      <details class="accordion content__item">
+        <summary class="accordion__summary">
+          <div class="accordion__closed">
+            <nav class="
+              commit-history
+              u-db-overflow-y--auto
+              u-mb-overflow-x--scroll
+            ">
+                <a href="../4ca338863b78e18ed7be316a5442c116136dc5d9/" class="commit-node commit-node--collapsed" title="[SKIP]: Create `git-read` GitHub Action
+"></a>
+                <a href="../44ee2d1227991296dead3ca7d6ded221e409d26f/" class="commit-node commit-node--collapsed" title="[GENERATED]: Initial Commit
+"></a>
+                <a href="../e05d0f4bdbac2a95262b7cb7390539c184a51268/" class="commit-node commit-node--collapsed" title="[GENERATED]: Install ActiveStorage and ActionText
+"></a>
+                <a href="../9b386fad46eecda08db92e8fe4afe37943d042d5/" class="commit-node commit-node--collapsed" title="[SKIP]: Install TailwindCSS
+"></a>
+                <a href="../952ad9fde3ab9c87a2553b0387f33656d2bf7a43/" class="commit-node commit-node--collapsed" title="View Locations near thoughtbot NYC
+"></a>
+                <a href="../647515fbdf76371180392b804961d117c07558bf/" class="commit-node commit-node--collapsed" title="View Users and the Locations they've added"></a>
+                <a href="../e2355e118a7b190450e9602a8071a680a59c7c7b/" class="commit-node commit-node--collapsed" title="View other nearby Locations"></a>
+                <a href="../93bb0c491877c8051b51daaffdbb531adbe8b196/" class="commit-node commit-node--collapsed" title="View rich text Recommendations from Users"></a>
+                <a href="../d7b75c780c376a916186f0ea2c449cd3d161920e/" class="commit-node commit-node--collapsed" title="Style with TailwindCSS"></a>
+                <a href="../ac7c272f40b628dd3e9dfd8e57701966cb1d7db6/" class="commit-node commit-node--collapsed" title="Mobile: Switch between Map and List"></a>
+                <a href="../fe3325b1ca71ce8412eb7dff608a67a242d273f6/" class="commit-node commit-node--collapsed" title="Sliding drawer Search results on Mobile"></a>
+                <a href="../e612f73dbf6aaf8d47a575a9f1d3686f38f728c9/" class="commit-node commit-node--collapsed" title="Render the Locations on a Leaflet map"></a>
+                <a href="../0911bea49692e6015fb17effa6c92e9a1d0acf37/" class="commit-node commit-node--collapsed" title="Pan around the map to “Search this Area”"></a>
+                <a href="../a67f67586127053eee0e3dc6765cc03c15deea39/" class="commit-node commit-node--collapsed" title="Clicking on a Card pans the map"></a>
+                <a href="../c9bb2feb0f1cc5c9e5263f8e04b5e676e620c030/" class="commit-node commit-node--collapsed" title="[GENERATED]: Initial Commit for iOS Application"></a>
+                <a href="./" class="commit-node commit-node--collapsed" title="Wire up Rec-It-Ralph-ios" aria-current="page"></a>
+                <a href="../6891dc5fcde3f046792bf3b85ea2bbe695d599b1/" class="commit-node commit-node--collapsed" title="Add iOS platform-specific styles"></a>
+                <a href="../be77eda5a3383805d178b26c8eba5f8ca79dbbf4/" class="commit-node commit-node--collapsed" title="prototyping with SwiftUI: both directions"></a>
+            </nav>
+
+            <div class="accordion__toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--desktop"><title>Expand History</title>
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--mobile"><title>Expand History</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+            </div>
+          </div>
+
+          <div class="accordion__opened">
+            <div class="accordion__toggle accordion__toggle--fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--desktop"><title>Collapse History</title>
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 010 .708L5.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+</svg>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--mobile"><title>Collapse History</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+            </div>
+          </div>
+        </summary>
+
+        <nav class="
+          commit-history
+          commit-history--full
+          u-db-overflow-y--auto
+          u-mb-overflow-x--scroll
+        ">
+<a href="../4ca338863b78e18ed7be316a5442c116136dc5d9/" class="commit-node commit-node--full">              <p>[SKIP]: Create <code>git-read</code> GitHub Action</p>
+
+</a><a href="../44ee2d1227991296dead3ca7d6ded221e409d26f/" class="commit-node commit-node--full">              <p>[GENERATED]: Initial Commit</p>
+
+</a><a href="../e05d0f4bdbac2a95262b7cb7390539c184a51268/" class="commit-node commit-node--full">              <p>[GENERATED]: Install ActiveStorage and ActionText</p>
+
+</a><a href="../9b386fad46eecda08db92e8fe4afe37943d042d5/" class="commit-node commit-node--full">              <p>[SKIP]: Install TailwindCSS</p>
+
+</a><a href="../952ad9fde3ab9c87a2553b0387f33656d2bf7a43/" class="commit-node commit-node--full">              <p>View Locations near thoughtbot NYC</p>
+
+</a><a href="../647515fbdf76371180392b804961d117c07558bf/" class="commit-node commit-node--full">              <p>View Users and the Locations they&#39;ve added</p>
+
+</a><a href="../e2355e118a7b190450e9602a8071a680a59c7c7b/" class="commit-node commit-node--full">              <p>View other nearby Locations</p>
+
+</a><a href="../93bb0c491877c8051b51daaffdbb531adbe8b196/" class="commit-node commit-node--full">              <p>View rich text Recommendations from Users</p>
+
+</a><a href="../d7b75c780c376a916186f0ea2c449cd3d161920e/" class="commit-node commit-node--full">              <p>Style with TailwindCSS</p>
+
+</a><a href="../ac7c272f40b628dd3e9dfd8e57701966cb1d7db6/" class="commit-node commit-node--full">              <p>Mobile: Switch between Map and List</p>
+
+</a><a href="../fe3325b1ca71ce8412eb7dff608a67a242d273f6/" class="commit-node commit-node--full">              <p>Sliding drawer Search results on Mobile</p>
+
+</a><a href="../e612f73dbf6aaf8d47a575a9f1d3686f38f728c9/" class="commit-node commit-node--full">              <p>Render the Locations on a Leaflet map</p>
+
+</a><a href="../0911bea49692e6015fb17effa6c92e9a1d0acf37/" class="commit-node commit-node--full">              <p>Pan around the map to “Search this Area”</p>
+
+</a><a href="../a67f67586127053eee0e3dc6765cc03c15deea39/" class="commit-node commit-node--full">              <p>Clicking on a Card pans the map</p>
+
+</a><a href="../c9bb2feb0f1cc5c9e5263f8e04b5e676e620c030/" class="commit-node commit-node--full">              <p>[GENERATED]: Initial Commit for iOS Application</p>
+
+</a><a href="./" class="commit-node commit-node--full" aria-current="page">              <p>Wire up Rec-It-Ralph-ios</p>
+
+</a><a href="../6891dc5fcde3f046792bf3b85ea2bbe695d599b1/" class="commit-node commit-node--full">              <p>Add iOS platform-specific styles</p>
+
+</a><a href="../be77eda5a3383805d178b26c8eba5f8ca79dbbf4/" class="commit-node commit-node--full">              <p>prototyping with SwiftUI: both directions</p>
+
+</a>        </nav>
+      </details>
+
+      <article class="
+        commit-content
+        commit-content--double
+        content__item
+        content__item--grow
+      ">
+        <section class="commit commit--message">
+
+          <h1 id="wire-up-rec-it-ralph-ios">Wire up Rec-It-Ralph-ios</h1>
+
+        </section>
+
+          <aside class="commit commit--diff commit--long-content">
+              <details
+  id="config/environments/development.rb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse config/environments/development.rb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand config/environments/development.rb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      config/environments/development.rb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/config/environments/development.rb b/config/environments/development.rb
+index 66df51f..8456625 100644
+</span><span class="gd">--- a/config/environments/development.rb
+</span><span class="gi">+++ b/config/environments/development.rb
+</span><span class="p">@@ -59,4 +59,6 @@</span> Rails.application.configure do
+   # Use an evented file watcher to asynchronously detect changes in source code,
+   # routes, locales, etc. This feature depends on the listen gem.
+   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+<span class="gi">+
++  config.hosts = []
+</span> end
+</code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj"
+  
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj b/ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj
+index b70f673..4213bb7 100644
+</span><span class="gd">--- a/ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph.xcodeproj/project.pbxproj
+</span><span class="p">@@ -9,21 +9,38 @@</span>
+ /* Begin PBXBuildFile section */
+ 		2A958CF92512E9F900F048C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A958CF82512E9F900F048C1 /* AppDelegate.swift */; };
+ 		2A958CFB2512E9F900F048C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A958CFA2512E9F900F048C1 /* SceneDelegate.swift */; };
+<span class="gd">-		2A958CFD2512E9F900F048C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A958CFC2512E9F900F048C1 /* ContentView.swift */; };
+</span> 		2A958CFF2512E9FB00F048C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A958CFE2512E9FB00F048C1 /* Assets.xcassets */; };
+ 		2A958D022512E9FB00F048C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A958D012512E9FB00F048C1 /* Preview Assets.xcassets */; };
+ 		2A958D052512E9FB00F048C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A958D032512E9FB00F048C1 /* LaunchScreen.storyboard */; };
+<span class="gi">+		2A958D172512F24F00F048C1 /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A958D162512F24F00F048C1 /* Turbolinks.framework */; };
++		2A958D182512F25400F048C1 /* Turbolinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A958D162512F24F00F048C1 /* Turbolinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
++		2A958D1A2512F61C00F048C1 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A958D192512F61C00F048C1 /* ApplicationViewController.swift */; };
+</span> /* End PBXBuildFile section */
+ 
+<span class="gi">+/* Begin PBXCopyFilesBuildPhase section */
++		2A958D132512F16400F048C1 /* Embed Frameworks */ = {
++			isa = PBXCopyFilesBuildPhase;
++			buildActionMask = 2147483647;
++			dstPath = "";
++			dstSubfolderSpec = 10;
++			files = (
++				2A958D182512F25400F048C1 /* Turbolinks.framework in Embed Frameworks */,
++			);
++			name = "Embed Frameworks";
++			runOnlyForDeploymentPostprocessing = 0;
++		};
++/* End PBXCopyFilesBuildPhase section */
++
+</span> /* Begin PBXFileReference section */
+ 		2A958CF52512E9F900F048C1 /* rec-it-ralph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rec-it-ralph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		2A958CF82512E9F900F048C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "&lt;group&gt;"; };
+ 		2A958CFA2512E9F900F048C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "&lt;group&gt;"; };
+<span class="gd">-		2A958CFC2512E9F900F048C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "&lt;group&gt;"; };
+</span> 		2A958CFE2512E9FB00F048C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "&lt;group&gt;"; };
+ 		2A958D012512E9FB00F048C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "&lt;group&gt;"; };
+ 		2A958D042512E9FB00F048C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "&lt;group&gt;"; };
+ 		2A958D062512E9FB00F048C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "&lt;group&gt;"; };
+<span class="gi">+		2A958D162512F24F00F048C1 /* Turbolinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Turbolinks.framework; path = "rec-it-ralph/Frameworks/Turbolinks.framework"; sourceTree = "&lt;group&gt;"; };
++		2A958D192512F61C00F048C1 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "&lt;group&gt;"; };
+</span> /* End PBXFileReference section */
+ 
+ /* Begin PBXFrameworksBuildPhase section */
+<span class="p">@@ -31,6 +48,7 @@</span>
+ 			isa = PBXFrameworksBuildPhase;
+ 			buildActionMask = 2147483647;
+ 			files = (
+<span class="gi">+				2A958D172512F24F00F048C1 /* Turbolinks.framework in Frameworks */,
+</span> 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+ 		};
+<span class="p">@@ -42,6 +60,7 @@</span>
+ 			children = (
+ 				2A958CF72512E9F900F048C1 /* rec-it-ralph */,
+ 				2A958CF62512E9F900F048C1 /* Products */,
+<span class="gi">+				2A958D0C2512F10900F048C1 /* Frameworks */,
+</span> 			);
+ 			sourceTree = "&lt;group&gt;";
+ 		};
+<span class="p">@@ -58,7 +77,7 @@</span>
+ 			children = (
+ 				2A958CF82512E9F900F048C1 /* AppDelegate.swift */,
+ 				2A958CFA2512E9F900F048C1 /* SceneDelegate.swift */,
+<span class="gd">-				2A958CFC2512E9F900F048C1 /* ContentView.swift */,
+</span><span class="gi">+				2A958D192512F61C00F048C1 /* ApplicationViewController.swift */,
+</span> 				2A958CFE2512E9FB00F048C1 /* Assets.xcassets */,
+ 				2A958D032512E9FB00F048C1 /* LaunchScreen.storyboard */,
+ 				2A958D062512E9FB00F048C1 /* Info.plist */,
+<span class="p">@@ -75,6 +94,14 @@</span>
+ 			path = "Preview Content";
+ 			sourceTree = "&lt;group&gt;";
+ 		};
+<span class="gi">+		2A958D0C2512F10900F048C1 /* Frameworks */ = {
++			isa = PBXGroup;
++			children = (
++				2A958D162512F24F00F048C1 /* Turbolinks.framework */,
++			);
++			name = Frameworks;
++			sourceTree = "&lt;group&gt;";
++		};
+</span> /* End PBXGroup section */
+ 
+ /* Begin PBXNativeTarget section */
+<span class="p">@@ -85,6 +112,7 @@</span>
+ 				2A958CF12512E9F900F048C1 /* Sources */,
+ 				2A958CF22512E9F900F048C1 /* Frameworks */,
+ 				2A958CF32512E9F900F048C1 /* Resources */,
+<span class="gi">+				2A958D132512F16400F048C1 /* Embed Frameworks */,
+</span> 			);
+ 			buildRules = (
+ 			);
+<span class="p">@@ -147,8 +175,8 @@</span>
+ 			buildActionMask = 2147483647;
+ 			files = (
+ 				2A958CF92512E9F900F048C1 /* AppDelegate.swift in Sources */,
+<span class="gi">+				2A958D1A2512F61C00F048C1 /* ApplicationViewController.swift in Sources */,
+</span> 				2A958CFB2512E9F900F048C1 /* SceneDelegate.swift in Sources */,
+<span class="gd">-				2A958CFD2512E9F900F048C1 /* ContentView.swift in Sources */,
+</span> 			);
+ 			runOnlyForDeploymentPostprocessing = 0;
+ 		};
+<span class="p">@@ -287,6 +315,10 @@</span>
+ 				CODE_SIGN_STYLE = Automatic;
+ 				DEVELOPMENT_ASSET_PATHS = "\"rec-it-ralph/Preview Content\"";
+ 				ENABLE_PREVIEWS = YES;
+<span class="gi">+				FRAMEWORK_SEARCH_PATHS = (
++					"$(inherited)",
++					"$(PROJECT_DIR)/rec-it-ralph/Frameworks",
++				);
+</span> 				INFOPLIST_FILE = "rec-it-ralph/Info.plist";
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+<span class="p">@@ -306,6 +338,10 @@</span>
+ 				CODE_SIGN_STYLE = Automatic;
+ 				DEVELOPMENT_ASSET_PATHS = "\"rec-it-ralph/Preview Content\"";
+ 				ENABLE_PREVIEWS = YES;
+<span class="gi">+				FRAMEWORK_SEARCH_PATHS = (
++					"$(inherited)",
++					"$(PROJECT_DIR)/rec-it-ralph/Frameworks",
++				);
+</span> 				INFOPLIST_FILE = "rec-it-ralph/Info.plist";
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+</code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/ApplicationViewController.swift"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/ApplicationViewController.swift</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/ApplicationViewController.swift</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/ApplicationViewController.swift
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/ApplicationViewController.swift b/ios/rec-it-ralph/rec-it-ralph/ApplicationViewController.swift
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..d139e5e
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph/ApplicationViewController.swift
+</span><span class="p">@@ -0,0 +1,4 @@</span>
+<span class="gi">+import UIKit
++
++class ApplicationViewController: UINavigationController {
++}
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard b/ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard
+index 865e932..125fd91 100644
+</span><span class="gd">--- a/ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph/Base.lproj/LaunchScreen.storyboard
+</span><span class="p">@@ -1,7 +1,8 @@</span>
+<span class="gd">-&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+-&lt;document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM"&gt;
+</span><span class="gi">+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
++&lt;document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM"&gt;
++    &lt;device id="retina6_1" orientation="portrait" appearance="light"/&gt;
+</span>     &lt;dependencies&gt;
+<span class="gd">-        &lt;plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/&gt;
+</span><span class="gi">+        &lt;plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/&gt;
+</span>         &lt;capability name="Safe area layout guides" minToolsVersion="9.0"/&gt;
+         &lt;capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/&gt;
+     &lt;/dependencies&gt;
+<span class="p">@@ -11,9 +12,9 @@</span>
+             &lt;objects&gt;
+                 &lt;viewController id="01J-lp-oVM" sceneMemberID="viewController"&gt;
+                     &lt;view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3"&gt;
+<span class="gd">-                        &lt;rect key="frame" x="0.0" y="0.0" width="375" height="667"/&gt;
+</span><span class="gi">+                        &lt;rect key="frame" x="0.0" y="0.0" width="414" height="896"/&gt;
+</span>                         &lt;autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/&gt;
+<span class="gd">-                        &lt;color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/&gt;
+</span><span class="gi">+                        &lt;color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/&gt;
+</span>                         &lt;viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/&gt;
+                     &lt;/view&gt;
+                 &lt;/viewController&gt;
+</code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/ContentView.swift"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/ContentView.swift</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/ContentView.swift</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/ContentView.swift
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/ContentView.swift b/ios/rec-it-ralph/rec-it-ralph/ContentView.swift
+</span><span class="p">deleted file mode 100644
+</span><span class="gh">index dfe33f9..0000000
+</span><span class="gd">--- a/ios/rec-it-ralph/rec-it-ralph/ContentView.swift
+</span><span class="gi">+++ /dev/null
+</span><span class="p">@@ -1,13 +0,0 @@</span>
+<span class="gd">-import SwiftUI
+-
+-struct ContentView: View {
+-    var body: some View {
+-        Text("Hello, World!")
+-    }
+-}
+-
+-struct ContentView_Previews: PreviewProvider {
+-    static var previews: some View {
+-        ContentView()
+-    }
+-}
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Headers/Turbolinks-Swift.h"
+  
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Headers/Turbolinks-Swift.h</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Headers/Turbolinks-Swift.h</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Headers/Turbolinks-Swift.h
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Headers/Turbolinks-Swift.h b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Headers/Turbolinks-Swift.h
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..20cfd9e
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Headers/Turbolinks-Swift.h
+</span><span class="p">@@ -0,0 +1,1020 @@</span>
+<span class="gi">+#ifndef TARGET_OS_SIMULATOR
++#include &lt;TargetConditionals.h&gt;
++#endif
++#if TARGET_OS_SIMULATOR
++#if 0
++#elif defined(__x86_64__) &amp;&amp; __x86_64__
++// Generated by Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wgcc-compat"
++
++#if !defined(__has_include)
++# define __has_include(x) 0
++#endif
++#if !defined(__has_attribute)
++# define __has_attribute(x) 0
++#endif
++#if !defined(__has_feature)
++# define __has_feature(x) 0
++#endif
++#if !defined(__has_warning)
++# define __has_warning(x) 0
++#endif
++
++#if __has_include(&lt;swift/objc-prologue.h&gt;)
++# include &lt;swift/objc-prologue.h&gt;
++#endif
++
++#pragma clang diagnostic ignored "-Wauto-import"
++#include &lt;Foundation/Foundation.h&gt;
++#include &lt;stdint.h&gt;
++#include &lt;stddef.h&gt;
++#include &lt;stdbool.h&gt;
++
++#if !defined(SWIFT_TYPEDEFS)
++# define SWIFT_TYPEDEFS 1
++# if __has_include(&lt;uchar.h&gt;)
++#  include &lt;uchar.h&gt;
++# elif !defined(__cplusplus)
++typedef uint_least16_t char16_t;
++typedef uint_least32_t char32_t;
++# endif
++typedef float swift_float2  __attribute__((__ext_vector_type__(2)));
++typedef float swift_float3  __attribute__((__ext_vector_type__(3)));
++typedef float swift_float4  __attribute__((__ext_vector_type__(4)));
++typedef double swift_double2  __attribute__((__ext_vector_type__(2)));
++typedef double swift_double3  __attribute__((__ext_vector_type__(3)));
++typedef double swift_double4  __attribute__((__ext_vector_type__(4)));
++typedef int swift_int2  __attribute__((__ext_vector_type__(2)));
++typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
++typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
++typedef unsigned int swift_uint2  __attribute__((__ext_vector_type__(2)));
++typedef unsigned int swift_uint3  __attribute__((__ext_vector_type__(3)));
++typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
++#endif
++
++#if !defined(SWIFT_PASTE)
++# define SWIFT_PASTE_HELPER(x, y) x##y
++# define SWIFT_PASTE(x, y) SWIFT_PASTE_HELPER(x, y)
++#endif
++#if !defined(SWIFT_METATYPE)
++# define SWIFT_METATYPE(X) Class
++#endif
++#if !defined(SWIFT_CLASS_PROPERTY)
++# if __has_feature(objc_class_property)
++#  define SWIFT_CLASS_PROPERTY(...) __VA_ARGS__
++# else
++#  define SWIFT_CLASS_PROPERTY(...)
++# endif
++#endif
++
++#if __has_attribute(objc_runtime_name)
++# define SWIFT_RUNTIME_NAME(X) __attribute__((objc_runtime_name(X)))
++#else
++# define SWIFT_RUNTIME_NAME(X)
++#endif
++#if __has_attribute(swift_name)
++# define SWIFT_COMPILE_NAME(X) __attribute__((swift_name(X)))
++#else
++# define SWIFT_COMPILE_NAME(X)
++#endif
++#if __has_attribute(objc_method_family)
++# define SWIFT_METHOD_FAMILY(X) __attribute__((objc_method_family(X)))
++#else
++# define SWIFT_METHOD_FAMILY(X)
++#endif
++#if __has_attribute(noescape)
++# define SWIFT_NOESCAPE __attribute__((noescape))
++#else
++# define SWIFT_NOESCAPE
++#endif
++#if __has_attribute(warn_unused_result)
++# define SWIFT_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
++#else
++# define SWIFT_WARN_UNUSED_RESULT
++#endif
++#if __has_attribute(noreturn)
++# define SWIFT_NORETURN __attribute__((noreturn))
++#else
++# define SWIFT_NORETURN
++#endif
++#if !defined(SWIFT_CLASS_EXTRA)
++# define SWIFT_CLASS_EXTRA
++#endif
++#if !defined(SWIFT_PROTOCOL_EXTRA)
++# define SWIFT_PROTOCOL_EXTRA
++#endif
++#if !defined(SWIFT_ENUM_EXTRA)
++# define SWIFT_ENUM_EXTRA
++#endif
++#if !defined(SWIFT_CLASS)
++# if __has_attribute(objc_subclassing_restricted)
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# else
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# endif
++#endif
++#if !defined(SWIFT_RESILIENT_CLASS)
++# if __has_attribute(objc_class_stub)
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME) __attribute__((objc_class_stub))
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_class_stub)) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# else
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME)
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# endif
++#endif
++
++#if !defined(SWIFT_PROTOCOL)
++# define SWIFT_PROTOCOL(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++# define SWIFT_PROTOCOL_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++#endif
++
++#if !defined(SWIFT_EXTENSION)
++# define SWIFT_EXTENSION(M) SWIFT_PASTE(M##_Swift_, __LINE__)
++#endif
++
++#if !defined(OBJC_DESIGNATED_INITIALIZER)
++# if __has_attribute(objc_designated_initializer)
++#  define OBJC_DESIGNATED_INITIALIZER __attribute__((objc_designated_initializer))
++# else
++#  define OBJC_DESIGNATED_INITIALIZER
++# endif
++#endif
++#if !defined(SWIFT_ENUM_ATTR)
++# if defined(__has_attribute) &amp;&amp; __has_attribute(enum_extensibility)
++#  define SWIFT_ENUM_ATTR(_extensibility) __attribute__((enum_extensibility(_extensibility)))
++# else
++#  define SWIFT_ENUM_ATTR(_extensibility)
++# endif
++#endif
++#if !defined(SWIFT_ENUM)
++# define SWIFT_ENUM(_type, _name, _extensibility) enum _name : _type _name; enum SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# if __has_feature(generalized_swift_name)
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) enum _name : _type _name SWIFT_COMPILE_NAME(SWIFT_NAME); enum SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# else
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) SWIFT_ENUM(_type, _name, _extensibility)
++# endif
++#endif
++#if !defined(SWIFT_UNAVAILABLE)
++# define SWIFT_UNAVAILABLE __attribute__((unavailable))
++#endif
++#if !defined(SWIFT_UNAVAILABLE_MSG)
++# define SWIFT_UNAVAILABLE_MSG(msg) __attribute__((unavailable(msg)))
++#endif
++#if !defined(SWIFT_AVAILABILITY)
++# define SWIFT_AVAILABILITY(plat, ...) __attribute__((availability(plat, __VA_ARGS__)))
++#endif
++#if !defined(SWIFT_WEAK_IMPORT)
++# define SWIFT_WEAK_IMPORT __attribute__((weak_import))
++#endif
++#if !defined(SWIFT_DEPRECATED)
++# define SWIFT_DEPRECATED __attribute__((deprecated))
++#endif
++#if !defined(SWIFT_DEPRECATED_MSG)
++# define SWIFT_DEPRECATED_MSG(...) __attribute__((deprecated(__VA_ARGS__)))
++#endif
++#if __has_feature(attribute_diagnose_if_objc)
++# define SWIFT_DEPRECATED_OBJC(Msg) __attribute__((diagnose_if(1, Msg, "warning")))
++#else
++# define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
++#endif
++#if !defined(IBSegueAction)
++# define IBSegueAction
++#endif
++#if __has_feature(modules)
++#if __has_warning("-Watimport-in-framework-header")
++#pragma clang diagnostic ignored "-Watimport-in-framework-header"
++#endif
++@import CoreGraphics;
++@import Foundation;
++@import ObjectiveC;
++@import UIKit;
++@import WebKit;
++#endif
++
++#pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
++#pragma clang diagnostic ignored "-Wduplicate-method-arg"
++#if __has_warning("-Wpragma-clang-attribute")
++# pragma clang diagnostic ignored "-Wpragma-clang-attribute"
++#endif
++#pragma clang diagnostic ignored "-Wunknown-pragmas"
++#pragma clang diagnostic ignored "-Wnullability"
++
++#if __has_attribute(external_source_symbol)
++# pragma push_macro("any")
++# undef any
++# pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="Turbolinks",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
++# pragma pop_macro("any")
++#endif
++
++
++
++
++SWIFT_CLASS("_TtC10Turbolinks7Session")
++@interface Session : NSObject
++- (nonnull instancetype)init;
++@end
++
++@class WKWebView;
++@class WKNavigationAction;
++
++@interface Session (SWIFT_EXTENSION(Turbolinks)) &lt;WKNavigationDelegate&gt;
++- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
++@end
++
++
++
++
++
++
++
++@class NSCoder;
++
++SWIFT_CLASS("_TtC10Turbolinks13VisitableView")
++@interface VisitableView : UIView
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
++- (void)layoutSubviews;
++@end
++
++@class NSBundle;
++
++SWIFT_CLASS("_TtC10Turbolinks23VisitableViewController")
++@interface VisitableViewController : UIViewController
++- (void)viewDidLoad;
++- (void)viewWillAppear:(BOOL)animated;
++- (void)viewDidAppear:(BOOL)animated;
++- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
++@end
++
++#if __has_attribute(external_source_symbol)
++# pragma clang attribute pop
++#endif
++#pragma clang diagnostic pop
++
++#elif defined(__i386__) &amp;&amp; __i386__
++// Generated by Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wgcc-compat"
++
++#if !defined(__has_include)
++# define __has_include(x) 0
++#endif
++#if !defined(__has_attribute)
++# define __has_attribute(x) 0
++#endif
++#if !defined(__has_feature)
++# define __has_feature(x) 0
++#endif
++#if !defined(__has_warning)
++# define __has_warning(x) 0
++#endif
++
++#if __has_include(&lt;swift/objc-prologue.h&gt;)
++# include &lt;swift/objc-prologue.h&gt;
++#endif
++
++#pragma clang diagnostic ignored "-Wauto-import"
++#include &lt;Foundation/Foundation.h&gt;
++#include &lt;stdint.h&gt;
++#include &lt;stddef.h&gt;
++#include &lt;stdbool.h&gt;
++
++#if !defined(SWIFT_TYPEDEFS)
++# define SWIFT_TYPEDEFS 1
++# if __has_include(&lt;uchar.h&gt;)
++#  include &lt;uchar.h&gt;
++# elif !defined(__cplusplus)
++typedef uint_least16_t char16_t;
++typedef uint_least32_t char32_t;
++# endif
++typedef float swift_float2  __attribute__((__ext_vector_type__(2)));
++typedef float swift_float3  __attribute__((__ext_vector_type__(3)));
++typedef float swift_float4  __attribute__((__ext_vector_type__(4)));
++typedef double swift_double2  __attribute__((__ext_vector_type__(2)));
++typedef double swift_double3  __attribute__((__ext_vector_type__(3)));
++typedef double swift_double4  __attribute__((__ext_vector_type__(4)));
++typedef int swift_int2  __attribute__((__ext_vector_type__(2)));
++typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
++typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
++typedef unsigned int swift_uint2  __attribute__((__ext_vector_type__(2)));
++typedef unsigned int swift_uint3  __attribute__((__ext_vector_type__(3)));
++typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
++#endif
++
++#if !defined(SWIFT_PASTE)
++# define SWIFT_PASTE_HELPER(x, y) x##y
++# define SWIFT_PASTE(x, y) SWIFT_PASTE_HELPER(x, y)
++#endif
++#if !defined(SWIFT_METATYPE)
++# define SWIFT_METATYPE(X) Class
++#endif
++#if !defined(SWIFT_CLASS_PROPERTY)
++# if __has_feature(objc_class_property)
++#  define SWIFT_CLASS_PROPERTY(...) __VA_ARGS__
++# else
++#  define SWIFT_CLASS_PROPERTY(...)
++# endif
++#endif
++
++#if __has_attribute(objc_runtime_name)
++# define SWIFT_RUNTIME_NAME(X) __attribute__((objc_runtime_name(X)))
++#else
++# define SWIFT_RUNTIME_NAME(X)
++#endif
++#if __has_attribute(swift_name)
++# define SWIFT_COMPILE_NAME(X) __attribute__((swift_name(X)))
++#else
++# define SWIFT_COMPILE_NAME(X)
++#endif
++#if __has_attribute(objc_method_family)
++# define SWIFT_METHOD_FAMILY(X) __attribute__((objc_method_family(X)))
++#else
++# define SWIFT_METHOD_FAMILY(X)
++#endif
++#if __has_attribute(noescape)
++# define SWIFT_NOESCAPE __attribute__((noescape))
++#else
++# define SWIFT_NOESCAPE
++#endif
++#if __has_attribute(warn_unused_result)
++# define SWIFT_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
++#else
++# define SWIFT_WARN_UNUSED_RESULT
++#endif
++#if __has_attribute(noreturn)
++# define SWIFT_NORETURN __attribute__((noreturn))
++#else
++# define SWIFT_NORETURN
++#endif
++#if !defined(SWIFT_CLASS_EXTRA)
++# define SWIFT_CLASS_EXTRA
++#endif
++#if !defined(SWIFT_PROTOCOL_EXTRA)
++# define SWIFT_PROTOCOL_EXTRA
++#endif
++#if !defined(SWIFT_ENUM_EXTRA)
++# define SWIFT_ENUM_EXTRA
++#endif
++#if !defined(SWIFT_CLASS)
++# if __has_attribute(objc_subclassing_restricted)
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# else
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# endif
++#endif
++#if !defined(SWIFT_RESILIENT_CLASS)
++# if __has_attribute(objc_class_stub)
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME) __attribute__((objc_class_stub))
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_class_stub)) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# else
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME)
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# endif
++#endif
++
++#if !defined(SWIFT_PROTOCOL)
++# define SWIFT_PROTOCOL(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++# define SWIFT_PROTOCOL_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++#endif
++
++#if !defined(SWIFT_EXTENSION)
++# define SWIFT_EXTENSION(M) SWIFT_PASTE(M##_Swift_, __LINE__)
++#endif
++
++#if !defined(OBJC_DESIGNATED_INITIALIZER)
++# if __has_attribute(objc_designated_initializer)
++#  define OBJC_DESIGNATED_INITIALIZER __attribute__((objc_designated_initializer))
++# else
++#  define OBJC_DESIGNATED_INITIALIZER
++# endif
++#endif
++#if !defined(SWIFT_ENUM_ATTR)
++# if defined(__has_attribute) &amp;&amp; __has_attribute(enum_extensibility)
++#  define SWIFT_ENUM_ATTR(_extensibility) __attribute__((enum_extensibility(_extensibility)))
++# else
++#  define SWIFT_ENUM_ATTR(_extensibility)
++# endif
++#endif
++#if !defined(SWIFT_ENUM)
++# define SWIFT_ENUM(_type, _name, _extensibility) enum _name : _type _name; enum SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# if __has_feature(generalized_swift_name)
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) enum _name : _type _name SWIFT_COMPILE_NAME(SWIFT_NAME); enum SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# else
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) SWIFT_ENUM(_type, _name, _extensibility)
++# endif
++#endif
++#if !defined(SWIFT_UNAVAILABLE)
++# define SWIFT_UNAVAILABLE __attribute__((unavailable))
++#endif
++#if !defined(SWIFT_UNAVAILABLE_MSG)
++# define SWIFT_UNAVAILABLE_MSG(msg) __attribute__((unavailable(msg)))
++#endif
++#if !defined(SWIFT_AVAILABILITY)
++# define SWIFT_AVAILABILITY(plat, ...) __attribute__((availability(plat, __VA_ARGS__)))
++#endif
++#if !defined(SWIFT_WEAK_IMPORT)
++# define SWIFT_WEAK_IMPORT __attribute__((weak_import))
++#endif
++#if !defined(SWIFT_DEPRECATED)
++# define SWIFT_DEPRECATED __attribute__((deprecated))
++#endif
++#if !defined(SWIFT_DEPRECATED_MSG)
++# define SWIFT_DEPRECATED_MSG(...) __attribute__((deprecated(__VA_ARGS__)))
++#endif
++#if __has_feature(attribute_diagnose_if_objc)
++# define SWIFT_DEPRECATED_OBJC(Msg) __attribute__((diagnose_if(1, Msg, "warning")))
++#else
++# define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
++#endif
++#if !defined(IBSegueAction)
++# define IBSegueAction
++#endif
++#if __has_feature(modules)
++#if __has_warning("-Watimport-in-framework-header")
++#pragma clang diagnostic ignored "-Watimport-in-framework-header"
++#endif
++@import CoreGraphics;
++@import Foundation;
++@import ObjectiveC;
++@import UIKit;
++@import WebKit;
++#endif
++
++#pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
++#pragma clang diagnostic ignored "-Wduplicate-method-arg"
++#if __has_warning("-Wpragma-clang-attribute")
++# pragma clang diagnostic ignored "-Wpragma-clang-attribute"
++#endif
++#pragma clang diagnostic ignored "-Wunknown-pragmas"
++#pragma clang diagnostic ignored "-Wnullability"
++
++#if __has_attribute(external_source_symbol)
++# pragma push_macro("any")
++# undef any
++# pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="Turbolinks",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
++# pragma pop_macro("any")
++#endif
++
++
++
++
++SWIFT_CLASS("_TtC10Turbolinks7Session")
++@interface Session : NSObject
++- (nonnull instancetype)init;
++@end
++
++@class WKWebView;
++@class WKNavigationAction;
++
++@interface Session (SWIFT_EXTENSION(Turbolinks)) &lt;WKNavigationDelegate&gt;
++- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
++@end
++
++
++
++
++
++
++
++@class NSCoder;
++
++SWIFT_CLASS("_TtC10Turbolinks13VisitableView")
++@interface VisitableView : UIView
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
++- (void)layoutSubviews;
++@end
++
++@class NSBundle;
++
++SWIFT_CLASS("_TtC10Turbolinks23VisitableViewController")
++@interface VisitableViewController : UIViewController
++- (void)viewDidLoad;
++- (void)viewWillAppear:(BOOL)animated;
++- (void)viewDidAppear:(BOOL)animated;
++- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
++@end
++
++#if __has_attribute(external_source_symbol)
++# pragma clang attribute pop
++#endif
++#pragma clang diagnostic pop
++
++#endif
++
++#else
++#if 0
++#elif defined(__arm64__) &amp;&amp; __arm64__
++// Generated by Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wgcc-compat"
++
++#if !defined(__has_include)
++# define __has_include(x) 0
++#endif
++#if !defined(__has_attribute)
++# define __has_attribute(x) 0
++#endif
++#if !defined(__has_feature)
++# define __has_feature(x) 0
++#endif
++#if !defined(__has_warning)
++# define __has_warning(x) 0
++#endif
++
++#if __has_include(&lt;swift/objc-prologue.h&gt;)
++# include &lt;swift/objc-prologue.h&gt;
++#endif
++
++#pragma clang diagnostic ignored "-Wauto-import"
++#include &lt;Foundation/Foundation.h&gt;
++#include &lt;stdint.h&gt;
++#include &lt;stddef.h&gt;
++#include &lt;stdbool.h&gt;
++
++#if !defined(SWIFT_TYPEDEFS)
++# define SWIFT_TYPEDEFS 1
++# if __has_include(&lt;uchar.h&gt;)
++#  include &lt;uchar.h&gt;
++# elif !defined(__cplusplus)
++typedef uint_least16_t char16_t;
++typedef uint_least32_t char32_t;
++# endif
++typedef float swift_float2  __attribute__((__ext_vector_type__(2)));
++typedef float swift_float3  __attribute__((__ext_vector_type__(3)));
++typedef float swift_float4  __attribute__((__ext_vector_type__(4)));
++typedef double swift_double2  __attribute__((__ext_vector_type__(2)));
++typedef double swift_double3  __attribute__((__ext_vector_type__(3)));
++typedef double swift_double4  __attribute__((__ext_vector_type__(4)));
++typedef int swift_int2  __attribute__((__ext_vector_type__(2)));
++typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
++typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
++typedef unsigned int swift_uint2  __attribute__((__ext_vector_type__(2)));
++typedef unsigned int swift_uint3  __attribute__((__ext_vector_type__(3)));
++typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
++#endif
++
++#if !defined(SWIFT_PASTE)
++# define SWIFT_PASTE_HELPER(x, y) x##y
++# define SWIFT_PASTE(x, y) SWIFT_PASTE_HELPER(x, y)
++#endif
++#if !defined(SWIFT_METATYPE)
++# define SWIFT_METATYPE(X) Class
++#endif
++#if !defined(SWIFT_CLASS_PROPERTY)
++# if __has_feature(objc_class_property)
++#  define SWIFT_CLASS_PROPERTY(...) __VA_ARGS__
++# else
++#  define SWIFT_CLASS_PROPERTY(...)
++# endif
++#endif
++
++#if __has_attribute(objc_runtime_name)
++# define SWIFT_RUNTIME_NAME(X) __attribute__((objc_runtime_name(X)))
++#else
++# define SWIFT_RUNTIME_NAME(X)
++#endif
++#if __has_attribute(swift_name)
++# define SWIFT_COMPILE_NAME(X) __attribute__((swift_name(X)))
++#else
++# define SWIFT_COMPILE_NAME(X)
++#endif
++#if __has_attribute(objc_method_family)
++# define SWIFT_METHOD_FAMILY(X) __attribute__((objc_method_family(X)))
++#else
++# define SWIFT_METHOD_FAMILY(X)
++#endif
++#if __has_attribute(noescape)
++# define SWIFT_NOESCAPE __attribute__((noescape))
++#else
++# define SWIFT_NOESCAPE
++#endif
++#if __has_attribute(warn_unused_result)
++# define SWIFT_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
++#else
++# define SWIFT_WARN_UNUSED_RESULT
++#endif
++#if __has_attribute(noreturn)
++# define SWIFT_NORETURN __attribute__((noreturn))
++#else
++# define SWIFT_NORETURN
++#endif
++#if !defined(SWIFT_CLASS_EXTRA)
++# define SWIFT_CLASS_EXTRA
++#endif
++#if !defined(SWIFT_PROTOCOL_EXTRA)
++# define SWIFT_PROTOCOL_EXTRA
++#endif
++#if !defined(SWIFT_ENUM_EXTRA)
++# define SWIFT_ENUM_EXTRA
++#endif
++#if !defined(SWIFT_CLASS)
++# if __has_attribute(objc_subclassing_restricted)
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# else
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# endif
++#endif
++#if !defined(SWIFT_RESILIENT_CLASS)
++# if __has_attribute(objc_class_stub)
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME) __attribute__((objc_class_stub))
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_class_stub)) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# else
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME)
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# endif
++#endif
++
++#if !defined(SWIFT_PROTOCOL)
++# define SWIFT_PROTOCOL(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++# define SWIFT_PROTOCOL_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++#endif
++
++#if !defined(SWIFT_EXTENSION)
++# define SWIFT_EXTENSION(M) SWIFT_PASTE(M##_Swift_, __LINE__)
++#endif
++
++#if !defined(OBJC_DESIGNATED_INITIALIZER)
++# if __has_attribute(objc_designated_initializer)
++#  define OBJC_DESIGNATED_INITIALIZER __attribute__((objc_designated_initializer))
++# else
++#  define OBJC_DESIGNATED_INITIALIZER
++# endif
++#endif
++#if !defined(SWIFT_ENUM_ATTR)
++# if defined(__has_attribute) &amp;&amp; __has_attribute(enum_extensibility)
++#  define SWIFT_ENUM_ATTR(_extensibility) __attribute__((enum_extensibility(_extensibility)))
++# else
++#  define SWIFT_ENUM_ATTR(_extensibility)
++# endif
++#endif
++#if !defined(SWIFT_ENUM)
++# define SWIFT_ENUM(_type, _name, _extensibility) enum _name : _type _name; enum SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# if __has_feature(generalized_swift_name)
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) enum _name : _type _name SWIFT_COMPILE_NAME(SWIFT_NAME); enum SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# else
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) SWIFT_ENUM(_type, _name, _extensibility)
++# endif
++#endif
++#if !defined(SWIFT_UNAVAILABLE)
++# define SWIFT_UNAVAILABLE __attribute__((unavailable))
++#endif
++#if !defined(SWIFT_UNAVAILABLE_MSG)
++# define SWIFT_UNAVAILABLE_MSG(msg) __attribute__((unavailable(msg)))
++#endif
++#if !defined(SWIFT_AVAILABILITY)
++# define SWIFT_AVAILABILITY(plat, ...) __attribute__((availability(plat, __VA_ARGS__)))
++#endif
++#if !defined(SWIFT_WEAK_IMPORT)
++# define SWIFT_WEAK_IMPORT __attribute__((weak_import))
++#endif
++#if !defined(SWIFT_DEPRECATED)
++# define SWIFT_DEPRECATED __attribute__((deprecated))
++#endif
++#if !defined(SWIFT_DEPRECATED_MSG)
++# define SWIFT_DEPRECATED_MSG(...) __attribute__((deprecated(__VA_ARGS__)))
++#endif
++#if __has_feature(attribute_diagnose_if_objc)
++# define SWIFT_DEPRECATED_OBJC(Msg) __attribute__((diagnose_if(1, Msg, "warning")))
++#else
++# define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
++#endif
++#if !defined(IBSegueAction)
++# define IBSegueAction
++#endif
++#if __has_feature(modules)
++#if __has_warning("-Watimport-in-framework-header")
++#pragma clang diagnostic ignored "-Watimport-in-framework-header"
++#endif
++@import CoreGraphics;
++@import Foundation;
++@import ObjectiveC;
++@import UIKit;
++@import WebKit;
++#endif
++
++#pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
++#pragma clang diagnostic ignored "-Wduplicate-method-arg"
++#if __has_warning("-Wpragma-clang-attribute")
++# pragma clang diagnostic ignored "-Wpragma-clang-attribute"
++#endif
++#pragma clang diagnostic ignored "-Wunknown-pragmas"
++#pragma clang diagnostic ignored "-Wnullability"
++
++#if __has_attribute(external_source_symbol)
++# pragma push_macro("any")
++# undef any
++# pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="Turbolinks",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
++# pragma pop_macro("any")
++#endif
++
++
++
++
++SWIFT_CLASS("_TtC10Turbolinks7Session")
++@interface Session : NSObject
++- (nonnull instancetype)init;
++@end
++
++@class WKWebView;
++@class WKNavigationAction;
++
++@interface Session (SWIFT_EXTENSION(Turbolinks)) &lt;WKNavigationDelegate&gt;
++- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
++@end
++
++
++
++
++
++
++
++@class NSCoder;
++
++SWIFT_CLASS("_TtC10Turbolinks13VisitableView")
++@interface VisitableView : UIView
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
++- (void)layoutSubviews;
++@end
++
++@class NSBundle;
++
++SWIFT_CLASS("_TtC10Turbolinks23VisitableViewController")
++@interface VisitableViewController : UIViewController
++- (void)viewDidLoad;
++- (void)viewWillAppear:(BOOL)animated;
++- (void)viewDidAppear:(BOOL)animated;
++- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
++@end
++
++#if __has_attribute(external_source_symbol)
++# pragma clang attribute pop
++#endif
++#pragma clang diagnostic pop
++
++#elif defined(__ARM_ARCH_7A__) &amp;&amp; __ARM_ARCH_7A__
++// Generated by Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wgcc-compat"
++
++#if !defined(__has_include)
++# define __has_include(x) 0
++#endif
++#if !defined(__has_attribute)
++# define __has_attribute(x) 0
++#endif
++#if !defined(__has_feature)
++# define __has_feature(x) 0
++#endif
++#if !defined(__has_warning)
++# define __has_warning(x) 0
++#endif
++
++#if __has_include(&lt;swift/objc-prologue.h&gt;)
++# include &lt;swift/objc-prologue.h&gt;
++#endif
++
++#pragma clang diagnostic ignored "-Wauto-import"
++#include &lt;Foundation/Foundation.h&gt;
++#include &lt;stdint.h&gt;
++#include &lt;stddef.h&gt;
++#include &lt;stdbool.h&gt;
++
++#if !defined(SWIFT_TYPEDEFS)
++# define SWIFT_TYPEDEFS 1
++# if __has_include(&lt;uchar.h&gt;)
++#  include &lt;uchar.h&gt;
++# elif !defined(__cplusplus)
++typedef uint_least16_t char16_t;
++typedef uint_least32_t char32_t;
++# endif
++typedef float swift_float2  __attribute__((__ext_vector_type__(2)));
++typedef float swift_float3  __attribute__((__ext_vector_type__(3)));
++typedef float swift_float4  __attribute__((__ext_vector_type__(4)));
++typedef double swift_double2  __attribute__((__ext_vector_type__(2)));
++typedef double swift_double3  __attribute__((__ext_vector_type__(3)));
++typedef double swift_double4  __attribute__((__ext_vector_type__(4)));
++typedef int swift_int2  __attribute__((__ext_vector_type__(2)));
++typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
++typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
++typedef unsigned int swift_uint2  __attribute__((__ext_vector_type__(2)));
++typedef unsigned int swift_uint3  __attribute__((__ext_vector_type__(3)));
++typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
++#endif
++
++#if !defined(SWIFT_PASTE)
++# define SWIFT_PASTE_HELPER(x, y) x##y
++# define SWIFT_PASTE(x, y) SWIFT_PASTE_HELPER(x, y)
++#endif
++#if !defined(SWIFT_METATYPE)
++# define SWIFT_METATYPE(X) Class
++#endif
++#if !defined(SWIFT_CLASS_PROPERTY)
++# if __has_feature(objc_class_property)
++#  define SWIFT_CLASS_PROPERTY(...) __VA_ARGS__
++# else
++#  define SWIFT_CLASS_PROPERTY(...)
++# endif
++#endif
++
++#if __has_attribute(objc_runtime_name)
++# define SWIFT_RUNTIME_NAME(X) __attribute__((objc_runtime_name(X)))
++#else
++# define SWIFT_RUNTIME_NAME(X)
++#endif
++#if __has_attribute(swift_name)
++# define SWIFT_COMPILE_NAME(X) __attribute__((swift_name(X)))
++#else
++# define SWIFT_COMPILE_NAME(X)
++#endif
++#if __has_attribute(objc_method_family)
++# define SWIFT_METHOD_FAMILY(X) __attribute__((objc_method_family(X)))
++#else
++# define SWIFT_METHOD_FAMILY(X)
++#endif
++#if __has_attribute(noescape)
++# define SWIFT_NOESCAPE __attribute__((noescape))
++#else
++# define SWIFT_NOESCAPE
++#endif
++#if __has_attribute(warn_unused_result)
++# define SWIFT_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
++#else
++# define SWIFT_WARN_UNUSED_RESULT
++#endif
++#if __has_attribute(noreturn)
++# define SWIFT_NORETURN __attribute__((noreturn))
++#else
++# define SWIFT_NORETURN
++#endif
++#if !defined(SWIFT_CLASS_EXTRA)
++# define SWIFT_CLASS_EXTRA
++#endif
++#if !defined(SWIFT_PROTOCOL_EXTRA)
++# define SWIFT_PROTOCOL_EXTRA
++#endif
++#if !defined(SWIFT_ENUM_EXTRA)
++# define SWIFT_ENUM_EXTRA
++#endif
++#if !defined(SWIFT_CLASS)
++# if __has_attribute(objc_subclassing_restricted)
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_subclassing_restricted)) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# else
++#  define SWIFT_CLASS(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++#  define SWIFT_CLASS_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_CLASS_EXTRA
++# endif
++#endif
++#if !defined(SWIFT_RESILIENT_CLASS)
++# if __has_attribute(objc_class_stub)
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME) __attribute__((objc_class_stub))
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) __attribute__((objc_class_stub)) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# else
++#  define SWIFT_RESILIENT_CLASS(SWIFT_NAME) SWIFT_CLASS(SWIFT_NAME)
++#  define SWIFT_RESILIENT_CLASS_NAMED(SWIFT_NAME) SWIFT_CLASS_NAMED(SWIFT_NAME)
++# endif
++#endif
++
++#if !defined(SWIFT_PROTOCOL)
++# define SWIFT_PROTOCOL(SWIFT_NAME) SWIFT_RUNTIME_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++# define SWIFT_PROTOCOL_NAMED(SWIFT_NAME) SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_PROTOCOL_EXTRA
++#endif
++
++#if !defined(SWIFT_EXTENSION)
++# define SWIFT_EXTENSION(M) SWIFT_PASTE(M##_Swift_, __LINE__)
++#endif
++
++#if !defined(OBJC_DESIGNATED_INITIALIZER)
++# if __has_attribute(objc_designated_initializer)
++#  define OBJC_DESIGNATED_INITIALIZER __attribute__((objc_designated_initializer))
++# else
++#  define OBJC_DESIGNATED_INITIALIZER
++# endif
++#endif
++#if !defined(SWIFT_ENUM_ATTR)
++# if defined(__has_attribute) &amp;&amp; __has_attribute(enum_extensibility)
++#  define SWIFT_ENUM_ATTR(_extensibility) __attribute__((enum_extensibility(_extensibility)))
++# else
++#  define SWIFT_ENUM_ATTR(_extensibility)
++# endif
++#endif
++#if !defined(SWIFT_ENUM)
++# define SWIFT_ENUM(_type, _name, _extensibility) enum _name : _type _name; enum SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# if __has_feature(generalized_swift_name)
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) enum _name : _type _name SWIFT_COMPILE_NAME(SWIFT_NAME); enum SWIFT_COMPILE_NAME(SWIFT_NAME) SWIFT_ENUM_ATTR(_extensibility) SWIFT_ENUM_EXTRA _name : _type
++# else
++#  define SWIFT_ENUM_NAMED(_type, _name, SWIFT_NAME, _extensibility) SWIFT_ENUM(_type, _name, _extensibility)
++# endif
++#endif
++#if !defined(SWIFT_UNAVAILABLE)
++# define SWIFT_UNAVAILABLE __attribute__((unavailable))
++#endif
++#if !defined(SWIFT_UNAVAILABLE_MSG)
++# define SWIFT_UNAVAILABLE_MSG(msg) __attribute__((unavailable(msg)))
++#endif
++#if !defined(SWIFT_AVAILABILITY)
++# define SWIFT_AVAILABILITY(plat, ...) __attribute__((availability(plat, __VA_ARGS__)))
++#endif
++#if !defined(SWIFT_WEAK_IMPORT)
++# define SWIFT_WEAK_IMPORT __attribute__((weak_import))
++#endif
++#if !defined(SWIFT_DEPRECATED)
++# define SWIFT_DEPRECATED __attribute__((deprecated))
++#endif
++#if !defined(SWIFT_DEPRECATED_MSG)
++# define SWIFT_DEPRECATED_MSG(...) __attribute__((deprecated(__VA_ARGS__)))
++#endif
++#if __has_feature(attribute_diagnose_if_objc)
++# define SWIFT_DEPRECATED_OBJC(Msg) __attribute__((diagnose_if(1, Msg, "warning")))
++#else
++# define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
++#endif
++#if !defined(IBSegueAction)
++# define IBSegueAction
++#endif
++#if __has_feature(modules)
++#if __has_warning("-Watimport-in-framework-header")
++#pragma clang diagnostic ignored "-Watimport-in-framework-header"
++#endif
++@import CoreGraphics;
++@import Foundation;
++@import ObjectiveC;
++@import UIKit;
++@import WebKit;
++#endif
++
++#pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
++#pragma clang diagnostic ignored "-Wduplicate-method-arg"
++#if __has_warning("-Wpragma-clang-attribute")
++# pragma clang diagnostic ignored "-Wpragma-clang-attribute"
++#endif
++#pragma clang diagnostic ignored "-Wunknown-pragmas"
++#pragma clang diagnostic ignored "-Wnullability"
++
++#if __has_attribute(external_source_symbol)
++# pragma push_macro("any")
++# undef any
++# pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="Turbolinks",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
++# pragma pop_macro("any")
++#endif
++
++
++
++
++SWIFT_CLASS("_TtC10Turbolinks7Session")
++@interface Session : NSObject
++- (nonnull instancetype)init;
++@end
++
++@class WKWebView;
++@class WKNavigationAction;
++
++@interface Session (SWIFT_EXTENSION(Turbolinks)) &lt;WKNavigationDelegate&gt;
++- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
++@end
++
++
++
++
++
++
++
++@class NSCoder;
++
++SWIFT_CLASS("_TtC10Turbolinks13VisitableView")
++@interface VisitableView : UIView
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
++- (void)layoutSubviews;
++@end
++
++@class NSBundle;
++
++SWIFT_CLASS("_TtC10Turbolinks23VisitableViewController")
++@interface VisitableViewController : UIViewController
++- (void)viewDidLoad;
++- (void)viewWillAppear:(BOOL)animated;
++- (void)viewDidAppear:(BOOL)animated;
++- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
++- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
++@end
++
++#if __has_attribute(external_source_symbol)
++# pragma clang attribute pop
++#endif
++#pragma clang diagnostic pop
++
++#endif
++
++#endif
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Info.plist"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Info.plist</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Info.plist</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Info.plist
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Info.plist b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Info.plist
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..b3360a5
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Info.plist differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..b3a8617
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..fd34564
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..447ccbf
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..78cc16b
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64-apple-ios.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..447ccbf
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..78cc16b
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/arm64.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..b3a8617
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..fd34564
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7-apple-ios.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..b3a8617
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..fd34564
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/armv7.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..5edd8a3
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..8339dc1
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386-apple-ios-simulator.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..5edd8a3
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..8339dc1
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/i386.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..4a8fa04
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..27be8a8
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64-apple-ios-simulator.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftdoc"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftdoc</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftdoc</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftdoc
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftdoc b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftdoc
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..4a8fa04
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftdoc differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftmodule"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftmodule</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftmodule</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftmodule
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftmodule b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftmodule
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..27be8a8
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/Turbolinks.swiftmodule/x86_64.swiftmodule differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/module.modulemap"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/module.modulemap</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/module.modulemap</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/module.modulemap
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/module.modulemap b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/module.modulemap
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..cc5cab7
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Modules/module.modulemap
+</span><span class="p">@@ -0,0 +1,4 @@</span>
+<span class="gi">+framework module Turbolinks {
++  header "Turbolinks-Swift.h"
++  requires objc
++}
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Turbolinks"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Turbolinks</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Turbolinks</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Turbolinks
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Turbolinks b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Turbolinks
+</span><span class="p">new file mode 100755
+</span><span class="gh">index 0000000..15ad2bb
+</span><span class="p">Binary files /dev/null and b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/Turbolinks differ
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/WebView.js"
+  
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/WebView.js</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/WebView.js</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/WebView.js
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/WebView.js b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/WebView.js
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..3e39cd6
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph/Frameworks/Turbolinks.framework/WebView.js
+</span><span class="p">@@ -0,0 +1,120 @@</span>
+<span class="gi">+(function() {
++    function WebView(controller, messageHandler) {
++        this.controller = controller
++        this.messageHandler = messageHandler
++        controller.adapter = this
++    }
++
++    WebView.prototype = {
++        pageLoaded: function() {
++            var restorationIdentifier = this.controller.restorationIdentifier
++            this.postMessageAfterNextRepaint("pageLoaded", { restorationIdentifier: restorationIdentifier })
++        },
++
++        errorRaised: function(error) {
++            this.postMessage("errorRaised", { error: error })
++        },
++
++        visitLocationWithActionAndRestorationIdentifier: function(location, action, restorationIdentifier) {
++            this.controller.startVisitToLocationWithAction(location, action, restorationIdentifier)
++        },
++
++        // Current visit
++
++        issueRequestForVisitWithIdentifier: function(identifier) {
++            if (identifier == this.currentVisit.identifier) {
++                this.currentVisit.issueRequest()
++            }
++        },
++
++        changeHistoryForVisitWithIdentifier: function(identifier) {
++            if (identifier == this.currentVisit.identifier) {
++                this.currentVisit.changeHistory()
++            }
++        },
++
++        loadCachedSnapshotForVisitWithIdentifier: function(identifier) {
++            if (identifier == this.currentVisit.identifier) {
++                this.currentVisit.loadCachedSnapshot()
++            }
++        },
++
++        loadResponseForVisitWithIdentifier: function(identifier) {
++            if (identifier == this.currentVisit.identifier) {
++                this.currentVisit.loadResponse()
++            }
++        },
++
++        cancelVisitWithIdentifier: function(identifier) {
++            if (identifier == this.currentVisit.identifier) {
++                this.currentVisit.cancel()
++            }
++        },
++
++        // Adapter interface
++
++        visitProposedToLocationWithAction: function(location, action) {
++            this.postMessage("visitProposed", { location: location.absoluteURL, action: action })
++        },
++
++        visitStarted: function(visit) {
++            this.currentVisit = visit
++            this.postMessage("visitStarted", { identifier: visit.identifier, hasCachedSnapshot: visit.hasCachedSnapshot() })
++        },
++
++        visitRequestStarted: function(visit) {
++            this.postMessage("visitRequestStarted", { identifier: visit.identifier })
++        },
++
++        visitRequestCompleted: function(visit) {
++            this.postMessage("visitRequestCompleted", { identifier: visit.identifier })
++        },
++
++        visitRequestFailedWithStatusCode: function(visit, statusCode) {
++            this.postMessage("visitRequestFailed", { identifier: visit.identifier, statusCode: statusCode })
++        },
++
++        visitRequestFinished: function(visit) {
++            this.postMessage("visitRequestFinished", { identifier: visit.identifier })
++        },
++
++        visitRendered: function(visit) {
++            this.postMessageAfterNextRepaint("visitRendered", { identifier: visit.identifier })
++        },
++
++        visitCompleted: function(visit) {
++            this.postMessageAfterNextRepaint("visitCompleted", { identifier: visit.identifier, restorationIdentifier: visit.restorationIdentifier })
++        },
++
++        pageInvalidated: function() {
++            this.postMessage("pageInvalidated")
++        },
++
++        // Private
++
++        postMessage: function(name, data) {
++            this.messageHandler.postMessage({ name: name, data: data || {} })
++        },
++
++        postMessageAfterNextRepaint: function(name, data) {
++            // Post immediately if document is hidden or message may be queued by call to rAF
++            if (document.hidden) {
++                this.postMessage(name, data);
++            } else {
++                var postMessage = this.postMessage.bind(this, name, data)
++                requestAnimationFrame(function() {
++                    requestAnimationFrame(postMessage)
++                })
++            }
++        }
++    }
++
++    this.webView = new WebView(Turbolinks.controller, webkit.messageHandlers.turbolinks)
++
++    addEventListener("error", function(event) {
++        var error = event.message + " (" + event.filename + ":" + event.lineno + ":" + event.colno + ")"
++        webView.errorRaised(error)
++    }, false)
++
++    webView.pageLoaded()
++})()
+</span></code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/Info.plist"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/Info.plist</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/Info.plist</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/Info.plist
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/Info.plist b/ios/rec-it-ralph/rec-it-ralph/Info.plist
+index 9742bf0..cf16f92 100644
+</span><span class="gd">--- a/ios/rec-it-ralph/rec-it-ralph/Info.plist
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph/Info.plist
+</span><span class="p">@@ -20,6 +20,11 @@</span>
+ 	&lt;string&gt;1&lt;/string&gt;
+ 	&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
+ 	&lt;true/&gt;
+<span class="gi">+	&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
++	&lt;dict&gt;
++		&lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
++		&lt;true/&gt;
++	&lt;/dict&gt;
+</span> 	&lt;key&gt;UIApplicationSceneManifest&lt;/key&gt;
+ 	&lt;dict&gt;
+ 		&lt;key&gt;UIApplicationSupportsMultipleScenes&lt;/key&gt;
+</code></pre></div></details>
+
+              <details
+  id="ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift b/ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift
+index 8a62bfd..3d36c63 100644
+</span><span class="gd">--- a/ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift
+</span><span class="gi">+++ b/ios/rec-it-ralph/rec-it-ralph/SceneDelegate.swift
+</span><span class="p">@@ -1,28 +1,53 @@</span>
+<span class="gd">-import UIKit
+</span> import SwiftUI
+<span class="gi">+import Turbolinks
++import UIKit
++import WebKit
+</span> 
+ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+ 
+     var window: UIWindow?
+<span class="gi">+    var applicationController = ApplicationViewController()
++    lazy var turbolinksSession: Session = {
++        let configuration = WKWebViewConfiguration()
++        configuration.applicationNameForUserAgent = "RecItRalph iOS"
++        
++        return Session(webViewConfiguration: configuration)
++    }()
+</span> 
+ 
+     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+<span class="gd">-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+-
+-        // Create the SwiftUI view that provides the window contents.
+-        let contentView = ContentView()
+-
+-        // Use a UIHostingController as window root view controller.
+</span>         if let windowScene = scene as? UIWindowScene {
+             let window = UIWindow(windowScene: windowScene)
+<span class="gd">-            window.rootViewController = UIHostingController(rootView: contentView)
+</span><span class="gi">+            
++            window.rootViewController = applicationController
++            turbolinksSession.delegate = self
++            visit(URL(string: "http://localhost:3000")!, animated: false)
++            
+</span>             self.window = window
+             window.makeKeyAndVisible()
+         }
+     }
+<span class="gd">-
+-
+</span><span class="gi">+    
++    func visit(_ URL: URL, animated: Bool) {
++        let visitable = VisitableViewController(url: URL)
++        applicationController.pushViewController(visitable, animated: animated)
++        
++        turbolinksSession.visit(visitable)
++    }
+</span> }
+ 
+<span class="gi">+extension SceneDelegate: SessionDelegate {
++    func session(_ session: Session, didFailRequestForVisitable visitable: Visitable, withError error: NSError) {
++        // TODO
++    }
++    
++    func session(_ session: Session, didProposeVisitToURL URL: URL, withAction action: Action) {
++        switch action {
++        case .Replace:
++            visit(URL, animated: false)
++        default:
++            visit(URL, animated: true)
++        }
++    }
++    
++}
+</span></code></pre></div></details>
+
+          </aside>
+      </article>
+    </main>
+  </body>
+</html>
