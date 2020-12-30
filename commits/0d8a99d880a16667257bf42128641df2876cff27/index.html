@@ -1,0 +1,1008 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Render the Locations on a Leaflet map</title>
+    <link href="../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../javascripts/site.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__name">
+<a href="../../">          rec-it-ralph
+</a>      </h1>
+
+
+      <nav class="
+        header__navigation
+        navigation
+        
+      ">
+<a href="../ae1981edf75f6c8d929b515fc5cb08ce7351474c/">              &#8592; Previous
+</a>
+<a href="../a342e636baccee5536382e07e56c032a23b2440e/">              Next &#8594;
+</a>      </nav>
+    </header>
+
+    <main class="content">
+      <details class="accordion content__item">
+        <summary class="accordion__summary">
+          <div class="accordion__closed">
+            <nav class="
+              commit-history
+              u-db-overflow-y--auto
+              u-mb-overflow-x--scroll
+            ">
+                <a href="../4ca338863b78e18ed7be316a5442c116136dc5d9/" class="commit-node commit-node--collapsed" title="[SKIP]: Create `git-read` GitHub Action
+"></a>
+                <a href="../e283e56ab9db463caec1798c25892960f243c167/" class="commit-node commit-node--collapsed" title="[GENERATED]: Initial Commit
+"></a>
+                <a href="../a4827099fd874d21af6a763d8663a68c8bb39a5d/" class="commit-node commit-node--collapsed" title="[GENERATED]: Install ActiveStorage and ActionText
+"></a>
+                <a href="../76837b7a4f684f97103935a3801d2933c9e8a8a3/" class="commit-node commit-node--collapsed" title="[SKIP]: Install TailwindCSS
+"></a>
+                <a href="../9e2d38e85c981c0ce33cf9afcbc81d4d2737d72a/" class="commit-node commit-node--collapsed" title="View Locations near thoughtbot NYC
+"></a>
+                <a href="../d1de1c9c506baf5f837738c2cda731824bf5e600/" class="commit-node commit-node--collapsed" title="View Users and the Locations they've added"></a>
+                <a href="../66eed3666d4d7cdd521a6e8651c25dad73d5213f/" class="commit-node commit-node--collapsed" title="View other nearby Locations"></a>
+                <a href="../724da06549341f560797c808f38068c289acb486/" class="commit-node commit-node--collapsed" title="View rich text Recommendations from Users"></a>
+                <a href="../14d1367886ac81723d171622c4faeb62e80b89e0/" class="commit-node commit-node--collapsed" title="Style with TailwindCSS"></a>
+                <a href="../17829539ac982ef73b17fc81a9effea2de122df4/" class="commit-node commit-node--collapsed" title="Mobile: Switch between Map and List"></a>
+                <a href="../ae1981edf75f6c8d929b515fc5cb08ce7351474c/" class="commit-node commit-node--collapsed" title="Sliding drawer Search results on Mobile"></a>
+                <a href="./" class="commit-node commit-node--collapsed" title="Render the Locations on a Leaflet map" aria-current="page"></a>
+                <a href="../a342e636baccee5536382e07e56c032a23b2440e/" class="commit-node commit-node--collapsed" title="Pan around the map to “Search this Area”"></a>
+                <a href="../f008efdd2592ac182a114e618d0ad2b0a62d8988/" class="commit-node commit-node--collapsed" title="Clicking on a Card pans the map"></a>
+                <a href="../64390d5283f533d327ab97ab56879020ee12d85a/" class="commit-node commit-node--collapsed" title="[GENERATED]: Initial Commit for iOS Application"></a>
+                <a href="../73a4a52aa47ba34788059c759beddf7bb5ba29bb/" class="commit-node commit-node--collapsed" title="Wire up Rec-It-Ralph-ios"></a>
+                <a href="../1aa18a30c58037a598496f5df21487c70a7f9221/" class="commit-node commit-node--collapsed" title="Add iOS platform-specific styles"></a>
+                <a href="../3152b9dd2e4e2bd985bf254077790e5f39c3c75e/" class="commit-node commit-node--collapsed" title="prototyping with SwiftUI: both directions"></a>
+            </nav>
+
+            <div class="accordion__toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--desktop"><title>Expand History</title>
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--mobile"><title>Expand History</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+            </div>
+          </div>
+
+          <div class="accordion__opened">
+            <div class="accordion__toggle accordion__toggle--fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--desktop"><title>Collapse History</title>
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 010 .708L5.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+</svg>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--mobile"><title>Collapse History</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+            </div>
+          </div>
+        </summary>
+
+        <nav class="
+          commit-history
+          commit-history--full
+          u-db-overflow-y--auto
+          u-mb-overflow-x--scroll
+        ">
+<a href="../4ca338863b78e18ed7be316a5442c116136dc5d9/" class="commit-node commit-node--full">              <p>[SKIP]: Create <code>git-read</code> GitHub Action</p>
+
+</a><a href="../e283e56ab9db463caec1798c25892960f243c167/" class="commit-node commit-node--full">              <p>[GENERATED]: Initial Commit</p>
+
+</a><a href="../a4827099fd874d21af6a763d8663a68c8bb39a5d/" class="commit-node commit-node--full">              <p>[GENERATED]: Install ActiveStorage and ActionText</p>
+
+</a><a href="../76837b7a4f684f97103935a3801d2933c9e8a8a3/" class="commit-node commit-node--full">              <p>[SKIP]: Install TailwindCSS</p>
+
+</a><a href="../9e2d38e85c981c0ce33cf9afcbc81d4d2737d72a/" class="commit-node commit-node--full">              <p>View Locations near thoughtbot NYC</p>
+
+</a><a href="../d1de1c9c506baf5f837738c2cda731824bf5e600/" class="commit-node commit-node--full">              <p>View Users and the Locations they&#39;ve added</p>
+
+</a><a href="../66eed3666d4d7cdd521a6e8651c25dad73d5213f/" class="commit-node commit-node--full">              <p>View other nearby Locations</p>
+
+</a><a href="../724da06549341f560797c808f38068c289acb486/" class="commit-node commit-node--full">              <p>View rich text Recommendations from Users</p>
+
+</a><a href="../14d1367886ac81723d171622c4faeb62e80b89e0/" class="commit-node commit-node--full">              <p>Style with TailwindCSS</p>
+
+</a><a href="../17829539ac982ef73b17fc81a9effea2de122df4/" class="commit-node commit-node--full">              <p>Mobile: Switch between Map and List</p>
+
+</a><a href="../ae1981edf75f6c8d929b515fc5cb08ce7351474c/" class="commit-node commit-node--full">              <p>Sliding drawer Search results on Mobile</p>
+
+</a><a href="./" class="commit-node commit-node--full" aria-current="page">              <p>Render the Locations on a Leaflet map</p>
+
+</a><a href="../a342e636baccee5536382e07e56c032a23b2440e/" class="commit-node commit-node--full">              <p>Pan around the map to “Search this Area”</p>
+
+</a><a href="../f008efdd2592ac182a114e618d0ad2b0a62d8988/" class="commit-node commit-node--full">              <p>Clicking on a Card pans the map</p>
+
+</a><a href="../64390d5283f533d327ab97ab56879020ee12d85a/" class="commit-node commit-node--full">              <p>[GENERATED]: Initial Commit for iOS Application</p>
+
+</a><a href="../73a4a52aa47ba34788059c759beddf7bb5ba29bb/" class="commit-node commit-node--full">              <p>Wire up Rec-It-Ralph-ios</p>
+
+</a><a href="../1aa18a30c58037a598496f5df21487c70a7f9221/" class="commit-node commit-node--full">              <p>Add iOS platform-specific styles</p>
+
+</a><a href="../3152b9dd2e4e2bd985bf254077790e5f39c3c75e/" class="commit-node commit-node--full">              <p>prototyping with SwiftUI: both directions</p>
+
+</a>        </nav>
+      </details>
+
+      <article class="
+        commit-content
+        commit-content--double
+        content__item
+        content__item--grow
+      ">
+        <section class="commit commit--message">
+
+          <h1 id="render-the-locations-on-a-leaflet-map">Render the Locations on a Leaflet map</h1>
+
+        </section>
+
+          <aside class="commit commit--diff commit--long-content">
+              <details
+  id="app/javascript/controllers/leaflet_controller.js"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/javascript/controllers/leaflet_controller.js</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/javascript/controllers/leaflet_controller.js</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/javascript/controllers/leaflet_controller.js
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/javascript/controllers/leaflet_controller.js b/app/javascript/controllers/leaflet_controller.js
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..3d05e12
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/javascript/controllers/leaflet_controller.js
+</span><span class="p">@@ -0,0 +1,41 @@</span>
+<span class="gi">+import { Controller } from "stimulus"
++
++export default class extends Controller {
++  static targets = [ "template" ]
++  static values = {
++    center: Array,
++    configuration: Object,
++    geoJson: Object,
++  }
++
++  connect() {
++    const {
++      element,
++      centerValues,
++      configurationValue,
++      geoJsonValue,
++      templateTarget,
++    } = this
++    const { templateUrl, ...options } = configurationValue
++
++    this.map = this.map || L.map(element, {
++      layers: [ L.tileLayer(templateUrl, options) ]
++    })
++
++    const geoJsonLayer = L.geoJSON(geoJsonValue, {
++      pointToLayer: ({ properties }, latLng) =&gt; {
++        const template = templateTarget.content.getElementById(properties.iconId)
++        const icon = L.divIcon({ html: template.outerHTML, className: null })
++
++        return L.marker(latLng, { icon })
++      }
++    })
++
++    this.map.addLayer(geoJsonLayer)
++    this.map.fitBounds(geoJsonLayer.getBounds())
++
++    if (centerValues.length) {
++      this.map.panTo(centerValues, { animate: false })
++    }
++  }
++}
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/application/_map.geojson.jbuilder"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/application/_map.geojson.jbuilder</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/application/_map.geojson.jbuilder</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/application/_map.geojson.jbuilder
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/application/_map.geojson.jbuilder b/app/views/application/_map.geojson.jbuilder
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..55da718
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/application/_map.geojson.jbuilder
+</span><span class="p">@@ -0,0 +1,2 @@</span>
+<span class="gi">+json.type "FeatureCollection"
++json.features locations, partial: "locations/location", as: :location
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/application/_map.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/application/_map.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/application/_map.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/application/_map.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/application/_map.html.erb b/app/views/application/_map.html.erb
+index eb65229..5b0f2db 100644
+</span><span class="gd">--- a/app/views/application/_map.html.erb
+</span><span class="gi">+++ b/app/views/application/_map.html.erb
+</span><span class="p">@@ -1 +1,10 @@</span>
+<span class="gd">-&lt;aside class="bg-gray-500 absolute inset-0 z-0 md:relative md:w-1/2 lg:w-3/4"&gt;&lt;/aside&gt;
+</span><span class="gi">+&lt;%= tag.aside class: "absolute inset-0 z-0 md:relative md:w-1/2 lg:w-3/4", data: {
++  controller: "leaflet",
++  leaflet_configuration_value: Rails.application.config_for(:leaflet),
++  leaflet_center_values: local_assigns[:center].to_a,
++  leaflet_geo_json_value: render(formats: :geojson, partial: "map", locals: local_assigns),
++} do %&gt;
++  &lt;template data-leaflet-target="template"&gt;
++    &lt;%= render formats: :svg, layout: "locations/marker", partial: locations %&gt;
++  &lt;/template&gt;
++&lt;% end %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/layouts/application.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/layouts/application.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/layouts/application.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/layouts/application.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index 0e4ac4c..26f878d 100644
+</span><span class="gd">--- a/app/views/layouts/application.html.erb
+</span><span class="gi">+++ b/app/views/layouts/application.html.erb
+</span><span class="p">@@ -7,6 +7,12 @@</span>
+     &lt;%= csp_meta_tag %&gt;
+ 
+     &lt;%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %&gt;
+<span class="gi">+    &lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
++                           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
++                           crossorigin=""/&gt;
++    &lt;script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
++            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
++            crossorigin=""&gt;&lt;/script&gt;
+</span>     &lt;%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %&gt;
+   &lt;/head&gt;
+ 
+</code></pre></div></details>
+
+              <details
+  id="app/views/layouts/application.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/layouts/application.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/layouts/application.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/layouts/application.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/layouts/application.svg.erb b/app/views/layouts/application.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..d3d3fce
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/layouts/application.svg.erb
+</span><span class="p">@@ -0,0 +1,3 @@</span>
+<span class="gi">+&lt;%= render "image" do %&gt;
++  &lt;%= yield %&gt;
++&lt;% end %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/_location.geojson.jbuilder"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/_location.geojson.jbuilder</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/_location.geojson.jbuilder</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/_location.geojson.jbuilder
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/_location.geojson.jbuilder b/app/views/locations/_location.geojson.jbuilder
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..bb919c5
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/_location.geojson.jbuilder
+</span><span class="p">@@ -0,0 +1,8 @@</span>
+<span class="gi">+json.type "Feature"
++json.properties do
++  json.iconId dom_id(location, :marker)
++end
++json.geometry do
++  json.type "Point"
++  json.coordinates [ location.longitude, location.latitude ]
++end
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/_location.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/_location.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/_location.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/_location.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/_location.html.erb b/app/views/locations/_location.html.erb
+index 974b8f3..50b6a47 100644
+</span><span class="gd">--- a/app/views/locations/_location.html.erb
+</span><span class="gi">+++ b/app/views/locations/_location.html.erb
+</span><span class="p">@@ -1,6 +1,8 @@</span>
+ &lt;%= render "card_link", url: location_path(location), class: "space-y-2" do %&gt;
+   &lt;div class="flex items-center justify-between"&gt;
+     &lt;h2 class="font-bold text-xl truncate"&gt;&lt;%= location.name %&gt;&lt;/h2&gt;
+<span class="gi">+
++    &lt;%= render formats: :svg, partial: location, locals: { class: "h-8 w-8" } %&gt;
+</span>   &lt;/div&gt;
+ 
+   &lt;div class="flex items-center space-x-2"&gt;
+</code></pre></div></details>
+
+              <details
+  id="app/views/locations/_location.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/_location.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/_location.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/_location.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/_location.svg.erb b/app/views/locations/_location.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..dbcbd14
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/_location.svg.erb
+</span><span class="p">@@ -0,0 +1 @@</span>
+<span class="gi">+&lt;%= render "locations/icons/#{location.locatable_name}", location: location %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/_marker.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/_marker.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/_marker.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/_marker.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/_marker.svg.erb b/app/views/locations/_marker.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..3156c56
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/_marker.svg.erb
+</span><span class="p">@@ -0,0 +1,11 @@</span>
+<span class="gi">+&lt;%= link_to location_path(location), id: dom_id(location, :marker) do %&gt;
++  &lt;svg class="h-8 w-8" viewBox="0 0 29 34" fill="none" preserveAspectRatio="none"&gt;
++    &lt;title&gt;&lt;%= location.name %&gt;&lt;/title&gt;
++
++    &lt;path fill-rule="evenodd" clip-rule="evenodd" d="M23.9016 24.5C26.6454 21.9144 28.3582 18.2468 28.3582 14.1791C28.3582 6.3482 22.01 0 14.1791 0C6.3482 0 0 6.3482 0 14.1791C0 18.5588 1.98575 22.4748 5.10603 25.0757L14.5 34L24 24.5H23.9016Z" fill="#FC5520"/&gt;
++
++    &lt;g class="text-white"&gt;
++      &lt;%= yield %&gt;
++    &lt;/g&gt;
++  &lt;/svg&gt;
++&lt;% end %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/icons/_attraction.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/icons/_attraction.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/icons/_attraction.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/icons/_attraction.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/icons/_attraction.svg.erb b/app/views/locations/icons/_attraction.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..283e2aa
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/icons/_attraction.svg.erb
+</span><span class="p">@@ -0,0 +1 @@</span>
+<span class="gi">+&lt;path d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" fill="currentColor" /&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/icons/_cafe.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/icons/_cafe.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/icons/_cafe.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/icons/_cafe.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/icons/_cafe.svg.erb b/app/views/locations/icons/_cafe.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..113e7fe
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/icons/_cafe.svg.erb
+</span><span class="p">@@ -0,0 +1 @@</span>
+<span class="gi">+&lt;path d="M20.2734 8.45312C20.2734 8.63542 20.1615 8.83854 19.9375 9.0625L15 14V20H17.5C17.6354 20 17.7526 20.0495 17.8516 20.1484C17.9505 20.2474 18 20.3646 18 20.5C18 20.6354 17.9505 20.7526 17.8516 20.8516C17.7526 20.9505 17.6354 21 17.5 21H10.5C10.3646 21 10.2474 20.9505 10.1484 20.8516C10.0495 20.7526 10 20.6354 10 20.5C10 20.3646 10.0495 20.2474 10.1484 20.1484C10.2474 20.0495 10.3646 20 10.5 20H13V14L8.0625 9.0625C7.83854 8.83854 7.72656 8.63542 7.72656 8.45312C7.72656 8.33333 7.77344 8.23958 7.86719 8.17187C7.96094 8.09896 8.0599 8.05208 8.16406 8.03125C8.26823 8.01042 8.38021 8 8.5 8H19.5C19.6198 8 19.7318 8.01042 19.8359 8.03125C19.9401 8.05208 20.0391 8.09896 20.1328 8.17187C20.2266 8.23958 20.2734 8.33333 20.2734 8.45312Z" fill="currentColor"/&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/icons/_office.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/icons/_office.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/icons/_office.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/icons/_office.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/icons/_office.svg.erb b/app/views/locations/icons/_office.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..6ac208c
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/icons/_office.svg.erb
+</span><span class="p">@@ -0,0 +1,2 @@</span>
+<span class="gi">+&lt;path d="M15.31 29.9999C23.423 29.9999 29.9999 23.423 29.9999 15.31C29.9999 7.197 23.423 0.620117 15.31 0.620117C7.197 0.620117 0.620117 7.197 0.620117 15.31C0.620117 23.423 7.197 29.9999 15.31 29.9999Z" fill="#000"/&gt;
++&lt;path fill-rule="evenodd" clip-rule="evenodd" d="M15.5044 4.02455C16.9306 4.02455 18.1913 4.5523 18.9407 5.35457L19.3014 4.83244C18.4278 3.95643 17.0519 3.39172 15.5044 3.39172C13.9543 3.39172 12.5766 3.95813 11.7029 4.83636L12.0635 5.35918C12.8122 4.55435 14.0753 4.02455 15.5044 4.02455ZM17.9034 6.0541C17.2803 5.57539 16.4421 5.3116 15.5434 5.3116H15.5436C14.6449 5.3116 13.8067 5.57539 13.1834 6.0541C13.0418 6.16199 12.9112 6.28379 12.7935 6.41768L12.4282 5.88789C13.1328 5.15441 14.2657 4.67894 15.5436 4.67894C16.7912 4.67894 17.9008 5.13244 18.6085 5.83645L18.2451 6.3637C18.1441 6.25504 18.03 6.15151 17.9034 6.0541ZM15.5044 6.65359C16.3268 6.65359 17.0716 6.9511 17.5307 7.39881L17.8937 6.87361C17.3203 6.35216 16.4627 6.02076 15.5044 6.02076C14.5435 6.02076 13.6839 6.35369 13.1106 6.87753L13.4732 7.40358C13.9319 6.95314 14.6793 6.65359 15.5044 6.65359ZM11.0412 16.4488V20.6706C11.2456 20.9463 11.3702 21.2135 11.3702 21.5472C11.3702 21.9627 11.1851 22.3357 10.8944 22.5843L10.5321 22.2166C10.7397 22.058 10.8614 21.8106 10.8607 21.5482C10.8607 21.0867 10.4924 20.7124 10.038 20.7124C9.58388 20.7124 9.21563 21.0867 9.21563 21.5483C9.21514 21.8087 9.33496 22.0545 9.5398 22.2136L9.1779 22.5811C8.8896 22.3324 8.69971 21.9618 8.69971 21.5483C8.69971 21.2144 8.80174 20.907 9.00502 20.6706V14.1147C9.03893 13.8621 9.23107 13.658 9.47852 13.658L21.3217 13.6595C21.5695 13.6595 21.7648 13.8621 21.7988 14.1147V20.6738C21.9681 20.9101 22.1042 21.2158 22.1042 21.5499C22.1034 21.9475 21.9298 22.3247 21.629 22.5826L21.2652 22.2151C21.4699 22.056 21.5894 21.8102 21.5885 21.5499C21.5885 21.0884 21.2199 20.7141 20.7655 20.7141C20.3113 20.7141 19.9427 21.0882 19.9427 21.5499C19.9427 21.8234 20.0717 22.0659 20.2713 22.2185L19.9091 22.5863C19.6066 22.3273 19.4327 21.9476 19.4332 21.548C19.4332 21.2142 19.5647 20.9463 19.7626 20.6706V16.4836H19.1857V25.3479L19.5251 25.5754V26.3043H15.5547V25.5754L15.9957 25.3566V22.6171H14.842L14.8429 25.3479L15.2497 25.5754V26.3043H11.2449V25.5754L11.6521 25.3484V16.4488H11.0412ZM12.4308 8.0756H18.4488C18.6965 8.0756 18.9143 8.282 18.9143 8.5337V12.52C18.9143 12.7702 18.6965 12.9688 18.4488 12.9688H12.4309C12.1841 12.9688 11.9916 12.7702 11.9916 12.52V8.5337C11.9916 8.282 12.1841 8.0756 12.4308 8.0756ZM13.9069 11.0013C13.4844 11.0013 13.1413 10.6518 13.1413 10.2235C13.1413 9.79312 13.4844 9.44471 13.9069 9.44471C14.33 9.44471 14.6729 9.79302 14.6729 10.2235C14.6729 10.6518 14.33 11.0011 13.9069 11.0011V11.0013ZM16.2153 10.2235C16.2153 10.6518 16.5587 11.0013 16.9828 11.0013V11.0011C17.406 11.0011 17.749 10.6518 17.749 10.2235C17.749 9.79302 17.406 9.44471 16.9828 9.44471C16.5589 9.44471 16.2153 9.79312 16.2153 10.2235ZM14.2993 10.2236C14.3001 10.4424 14.1244 10.6205 13.9069 10.6214C13.6913 10.6214 13.5154 10.4426 13.5154 10.2236C13.5154 10.0023 13.6914 9.82478 13.9069 9.82478C14.0116 9.82507 14.1118 9.86739 14.1855 9.94215C14.2591 10.017 14.3001 10.1183 14.2993 10.2236ZM16.5909 10.2236C16.5901 10.4422 16.7654 10.6203 16.9828 10.6214C17.2004 10.6202 17.3762 10.4425 17.3764 10.2236C17.377 10.0042 17.2009 9.82576 16.9828 9.82478C16.7663 9.82478 16.5909 10.0023 16.5909 10.2236Z" fill="white"/&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/icons/_restaurant.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/icons/_restaurant.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/icons/_restaurant.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/icons/_restaurant.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/icons/_restaurant.svg.erb b/app/views/locations/icons/_restaurant.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..487da2b
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/icons/_restaurant.svg.erb
+</span><span class="p">@@ -0,0 +1 @@</span>
+<span class="gi">+&lt;path d="M0.000884017 5.67733L0.191422 0.428891C0.197705 0.313299 0.254512 0.204273 0.350044 0.124464C0.445575 0.0446553 0.572486 0.000198494 0.704411 0.00032977C0.836335 0.000198494 0.963246 0.0446553 1.05878 0.124464C1.15431 0.204273 1.21112 0.313299 1.2174 0.428891L1.35257 3.85738C1.35388 3.94703 1.39171 4.03331 1.4592 4.10064C1.5267 4.16797 1.61942 4.2119 1.72062 4.22451C1.77682 4.22984 1.83368 4.22496 1.88764 4.21019C1.94161 4.19541 1.99153 4.17105 2.0343 4.13863C2.07707 4.1062 2.11178 4.0664 2.13626 4.0217C2.16074 3.977 2.17447 3.92836 2.17661 3.8788L2.31014 0.450319C2.31201 0.346823 2.35349 0.246883 2.42793 0.166564C2.50236 0.086245 2.60542 0.0302122 2.72054 0.00747244C2.78846 -0.00249081 2.8578 -0.00249081 2.92573 0.00747244C3.04085 0.0302122 3.14391 0.086245 3.21834 0.166564C3.29277 0.246883 3.33425 0.346823 3.33612 0.450319L3.46966 3.8788C3.47179 3.92836 3.48553 3.977 3.51001 4.0217C3.53449 4.0664 3.5692 4.1062 3.61197 4.13863C3.65474 4.17105 3.70466 4.19541 3.75863 4.21019C3.81259 4.22496 3.86945 4.22984 3.92565 4.22451C4.02685 4.2119 4.11957 4.16797 4.18706 4.10064C4.25456 4.03331 4.29238 3.94703 4.2937 3.85738L4.42724 0.428891C4.43352 0.313299 4.49033 0.204273 4.58586 0.124464C4.68139 0.0446553 4.8083 0.000198494 4.94023 0.00032977C5.07215 0.000198494 5.19906 0.0446553 5.29459 0.124464C5.39013 0.204273 5.44693 0.313299 5.45322 0.428891L5.64375 5.67162C5.65361 5.92083 5.58741 6.16783 5.45198 6.38708C5.31656 6.60633 5.11684 6.78987 4.87346 6.91873L3.92728 7.42872V13.5057C3.92728 13.6368 3.86791 13.7625 3.76224 13.8552C3.65657 13.9479 3.51325 14 3.36381 14H2.2678C2.11836 14 1.97504 13.9479 1.86937 13.8552C1.7637 13.7625 1.70433 13.6368 1.70433 13.5057V7.41872L0.777695 6.92587C0.53286 6.79762 0.331672 6.61416 0.195058 6.39459C0.0584444 6.17501 -0.0086052 5.92734 0.000884017 5.67733ZM7.46934 8.96296H8.77217V13.5057C8.77216 13.571 8.7869 13.6356 8.81552 13.6959C8.84414 13.7561 8.88609 13.8108 8.93893 13.8567C8.99177 13.9027 9.05447 13.939 9.12339 13.9636C9.19232 13.9882 9.26612 14.0005 9.34053 14H10.4365C10.7476 14 11 13.7786 11 13.0329V0.348893C10.9947 0.28556 10.9709 0.224498 10.9308 0.171627C10.8907 0.118757 10.8357 0.0758707 10.7711 0.0471274C10.7066 0.0183842 10.6347 0.00475874 10.5623 0.00757217C10.49 0.0103856 10.4198 0.0295424 10.3584 0.0631854C9.34882 0.617036 8.51636 1.38693 7.93921 2.30052C7.36205 3.21411 7.05915 4.24142 7.05895 5.28591V8.61012C7.05895 8.70559 7.10219 8.79716 7.17915 8.86467C7.25611 8.93218 7.3605 8.97011 7.46934 8.97011V8.96296Z" fill="currentColor"/&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/index.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/index.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/index.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/index.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/index.html.erb b/app/views/locations/index.html.erb
+index a70f38c..2996686 100644
+</span><span class="gd">--- a/app/views/locations/index.html.erb
+</span><span class="gi">+++ b/app/views/locations/index.html.erb
+</span><span class="p">@@ -8,4 +8,4 @@</span>
+   &lt;/ul&gt;
+ &lt;% end %&gt;
+ 
+<span class="gd">-&lt;%= render "map" %&gt;
+</span><span class="gi">+&lt;%= render "map", locations: locations %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/show.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/show.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/show.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/show.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/show.html.erb b/app/views/locations/show.html.erb
+index 31c682b..5315870 100644
+</span><span class="gd">--- a/app/views/locations/show.html.erb
+</span><span class="gi">+++ b/app/views/locations/show.html.erb
+</span><span class="p">@@ -3,6 +3,8 @@</span>
+ &lt;%= render "sidebar", "data-sliding-drawer-offset-height-value": 50 do %&gt;
+   &lt;div class="flex items-center justify-between mb-4"&gt;
+     &lt;h1 class="font-bold text-brown text-2xl"&gt;&lt;%= location.name %&gt;&lt;/h1&gt;
+<span class="gi">+
++    &lt;%= render formats: :svg, layout: "image", partial: location, locals: { class: "h-12 w-12" } %&gt;
+</span>   &lt;/div&gt;
+ 
+   &lt;address class="mb-4 not-italic text-brown-lighter"&gt;
+<span class="p">@@ -52,4 +54,4 @@</span>
+   &lt;/dl&gt;
+ &lt;% end %&gt;
+ 
+<span class="gd">-&lt;%= render "map" %&gt;
+</span><span class="gi">+&lt;%= render "map", center: location.to_coordinates, locations: [ location ] + location.nearby(1, unit: :mi) %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/locations/show.svg.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/locations/show.svg.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/locations/show.svg.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/locations/show.svg.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/locations/show.svg.erb b/app/views/locations/show.svg.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..b84d1ac
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/views/locations/show.svg.erb
+</span><span class="p">@@ -0,0 +1 @@</span>
+<span class="gi">+&lt;%= render location %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/offices/_attachable.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/offices/_attachable.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/offices/_attachable.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/offices/_attachable.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/offices/_attachable.html.erb b/app/views/offices/_attachable.html.erb
+index 6431a2d..2c91282 100644
+</span><span class="gd">--- a/app/views/offices/_attachable.html.erb
+</span><span class="gi">+++ b/app/views/offices/_attachable.html.erb
+</span><span class="p">@@ -1,3 +1,4 @@</span>
+ &lt;%= link_to location_path(office.location), class: "underline" do %&gt;
+<span class="gi">+  &lt;%= image_tag location_path(office.location, format: :svg), class: "inline w-6" %&gt;
+</span>   &lt;%= office.name %&gt;
+ &lt;% end %&gt;
+</code></pre></div></details>
+
+              <details
+  id="app/views/users/show.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/users/show.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/users/show.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/users/show.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/users/show.html.erb b/app/views/users/show.html.erb
+index 059e651..e327e53 100644
+</span><span class="gd">--- a/app/views/users/show.html.erb
+</span><span class="gi">+++ b/app/views/users/show.html.erb
+</span><span class="p">@@ -20,4 +20,4 @@</span>
+   &lt;/dl&gt;
+ &lt;% end %&gt;
+ 
+<span class="gd">-&lt;%= render "map" %&gt;
+</span><span class="gi">+&lt;%= render "map", locations: user.created_locations %&gt;
+</span></code></pre></div></details>
+
+              <details
+  id="config/leaflet.yml"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse config/leaflet.yml</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand config/leaflet.yml</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      config/leaflet.yml
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/config/leaflet.yml b/config/leaflet.yml
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..f59c4d6
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/config/leaflet.yml
+</span><span class="p">@@ -0,0 +1,8 @@</span>
+<span class="gi">+shared:
++  accessToken: "pk.eyJ1Ijoic2VhbnBkb3lsZSIsImEiOiJja2YybWZkOTUxODdiMnNta2Y4cGp1dXVpIn0.CusYoNs-WHW3uTekCKyy_g"
++  attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
++  id: "mapbox/streets-v11"
++  maxZoom: 18
++  templateUrl: "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
++  tileSize: 512
++  zoomOffset: -1
+</span></code></pre></div></details>
+
+              <details
+  id="package.json"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse package.json</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand package.json</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      package.json
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/package.json b/package.json
+index aa1f369..9a24e99 100644
+</span><span class="gd">--- a/package.json
+</span><span class="gi">+++ b/package.json
+</span><span class="p">@@ -6,6 +6,7 @@</span>
+     "@rails/activestorage": "^6.0.0",
+     "@rails/ujs": "^6.0.0",
+     "@rails/webpacker": "5.1.1",
+<span class="gi">+    "leaflet": "^1.7.1",
+</span>     "stimulus": "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/stimulus.tar.gz",
+     "tailwindcss": "^1.8.9",
+     "turbolinks": "^5.2.0",
+</code></pre></div></details>
+
+              <details
+  id="test/system/locations_test.rb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse test/system/locations_test.rb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand test/system/locations_test.rb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      test/system/locations_test.rb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/test/system/locations_test.rb b/test/system/locations_test.rb
+index 33c669e..ce12835 100644
+</span><span class="gd">--- a/test/system/locations_test.rb
+</span><span class="gi">+++ b/test/system/locations_test.rb
+</span><span class="p">@@ -7,8 +7,14 @@</span> class LocationsTest &lt; ApplicationSystemTestCase
+ 
+     visit root_path
+ 
+<span class="gd">-    assert_text thoughtbot_nyc.name
+-    assert_text culture_espresso.name
+</span><span class="gi">+    within_sidebar do
++      assert_link thoughtbot_nyc.name
++      assert_link culture_espresso.name
++    end
++    within_map do
++      assert_link thoughtbot_nyc.name
++      assert_link culture_espresso.name
++    end
+</span>   end
+ 
+   test "views a Location" do
+<span class="p">@@ -17,7 +23,12 @@</span> class LocationsTest &lt; ApplicationSystemTestCase
+     visit root_path
+     click_on culture_espresso.name
+ 
+<span class="gd">-    assert_text culture_espresso.name
+</span><span class="gi">+    within_sidebar do
++      assert_text culture_espresso.name
++    end
++    within_map do
++      assert_link culture_espresso.name
++    end
+</span>   end
+ 
+   test "views a User's recommended Locations" do
+<span class="p">@@ -27,9 +38,35 @@</span> class LocationsTest &lt; ApplicationSystemTestCase
+     visit location_path(culture_espresso.location)
+     click_on culture_espresso.creator.name, match: :first
+ 
+<span class="gd">-    assert_text culture_espresso.creator.name
+-    assert_text culture_espresso.name
+-    assert_text thoughtbot_nyc.name
+</span><span class="gi">+    within_sidebar do
++      assert_text culture_espresso.creator.name
++      assert_link culture_espresso.name
++      assert_link thoughtbot_nyc.name
++    end
++    within_map do
++      assert_link culture_espresso.name
++      assert_link thoughtbot_nyc.name
++    end
++  end
++
++  test "visits a Location by clicking its map marker" do
++    culture_espresso = cafes(:culture_espresso)
++
++    visit root_path
++    within_map { click_on culture_espresso.name }
++
++    within_sidebar do
++      assert_text culture_espresso.name
++      assert_no_link culture_espresso.name
++    end
++  end
++
++  def within_sidebar(&amp;block)
++    within "main &gt; section:first-of-type", &amp;block
++  end
++
++  def within_map(&amp;block)
++    within ".leaflet-container", &amp;block
+</span>   end
+ 
+   test "renders Locations attached to a Recommendation's Rich Text" do
+</code></pre></div></details>
+
+              <details
+  id="yarn.lock"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse yarn.lock</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand yarn.lock</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      yarn.lock
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/yarn.lock b/yarn.lock
+index 63b3a96..c242784 100644
+</span><span class="gd">--- a/yarn.lock
+</span><span class="gi">+++ b/yarn.lock
+</span><span class="p">@@ -4232,6 +4232,11 @@</span> last-call-webpack-plugin@^3.0.0:
+     lodash "^4.17.5"
+     webpack-sources "^1.1.0"
+ 
+<span class="gi">+leaflet@^1.7.1:
++  version "1.7.1"
++  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.7.1.tgz#10d684916edfe1bf41d688a3b97127c0322a2a19"
++  integrity sha512-/xwPEBidtg69Q3HlqPdU3DnrXQOvQU/CCHA1tcDQVzOwm91YMYaILjNp7L4Eaw5Z4sOYdbBz6koWyibppd8Zqw==
++
+</span> leven@^3.1.0:
+   version "3.1.0"
+   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
+</code></pre></div></details>
+
+          </aside>
+      </article>
+    </main>
+  </body>
+</html>

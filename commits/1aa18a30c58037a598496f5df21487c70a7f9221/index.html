@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Add iOS platform-specific styles</title>
+    <link href="../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../javascripts/site.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+      <h1 class="header__name">
+<a href="../../">          rec-it-ralph
+</a>      </h1>
+
+
+      <nav class="
+        header__navigation
+        navigation
+        
+      ">
+<a href="../73a4a52aa47ba34788059c759beddf7bb5ba29bb/">              &#8592; Previous
+</a>
+<a href="../3152b9dd2e4e2bd985bf254077790e5f39c3c75e/">              Next &#8594;
+</a>      </nav>
+    </header>
+
+    <main class="content">
+      <details class="accordion content__item">
+        <summary class="accordion__summary">
+          <div class="accordion__closed">
+            <nav class="
+              commit-history
+              u-db-overflow-y--auto
+              u-mb-overflow-x--scroll
+            ">
+                <a href="../4ca338863b78e18ed7be316a5442c116136dc5d9/" class="commit-node commit-node--collapsed" title="[SKIP]: Create `git-read` GitHub Action
+"></a>
+                <a href="../e283e56ab9db463caec1798c25892960f243c167/" class="commit-node commit-node--collapsed" title="[GENERATED]: Initial Commit
+"></a>
+                <a href="../a4827099fd874d21af6a763d8663a68c8bb39a5d/" class="commit-node commit-node--collapsed" title="[GENERATED]: Install ActiveStorage and ActionText
+"></a>
+                <a href="../76837b7a4f684f97103935a3801d2933c9e8a8a3/" class="commit-node commit-node--collapsed" title="[SKIP]: Install TailwindCSS
+"></a>
+                <a href="../9e2d38e85c981c0ce33cf9afcbc81d4d2737d72a/" class="commit-node commit-node--collapsed" title="View Locations near thoughtbot NYC
+"></a>
+                <a href="../d1de1c9c506baf5f837738c2cda731824bf5e600/" class="commit-node commit-node--collapsed" title="View Users and the Locations they've added"></a>
+                <a href="../66eed3666d4d7cdd521a6e8651c25dad73d5213f/" class="commit-node commit-node--collapsed" title="View other nearby Locations"></a>
+                <a href="../724da06549341f560797c808f38068c289acb486/" class="commit-node commit-node--collapsed" title="View rich text Recommendations from Users"></a>
+                <a href="../14d1367886ac81723d171622c4faeb62e80b89e0/" class="commit-node commit-node--collapsed" title="Style with TailwindCSS"></a>
+                <a href="../17829539ac982ef73b17fc81a9effea2de122df4/" class="commit-node commit-node--collapsed" title="Mobile: Switch between Map and List"></a>
+                <a href="../ae1981edf75f6c8d929b515fc5cb08ce7351474c/" class="commit-node commit-node--collapsed" title="Sliding drawer Search results on Mobile"></a>
+                <a href="../0d8a99d880a16667257bf42128641df2876cff27/" class="commit-node commit-node--collapsed" title="Render the Locations on a Leaflet map"></a>
+                <a href="../a342e636baccee5536382e07e56c032a23b2440e/" class="commit-node commit-node--collapsed" title="Pan around the map to “Search this Area”"></a>
+                <a href="../f008efdd2592ac182a114e618d0ad2b0a62d8988/" class="commit-node commit-node--collapsed" title="Clicking on a Card pans the map"></a>
+                <a href="../64390d5283f533d327ab97ab56879020ee12d85a/" class="commit-node commit-node--collapsed" title="[GENERATED]: Initial Commit for iOS Application"></a>
+                <a href="../73a4a52aa47ba34788059c759beddf7bb5ba29bb/" class="commit-node commit-node--collapsed" title="Wire up Rec-It-Ralph-ios"></a>
+                <a href="./" class="commit-node commit-node--collapsed" title="Add iOS platform-specific styles" aria-current="page"></a>
+                <a href="../3152b9dd2e4e2bd985bf254077790e5f39c3c75e/" class="commit-node commit-node--collapsed" title="prototyping with SwiftUI: both directions"></a>
+            </nav>
+
+            <div class="accordion__toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--desktop"><title>Expand History</title>
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--mobile"><title>Expand History</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+            </div>
+          </div>
+
+          <div class="accordion__opened">
+            <div class="accordion__toggle accordion__toggle--fill">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--desktop"><title>Collapse History</title>
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 010 .708L5.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+</svg>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="accordion--mobile"><title>Collapse History</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+            </div>
+          </div>
+        </summary>
+
+        <nav class="
+          commit-history
+          commit-history--full
+          u-db-overflow-y--auto
+          u-mb-overflow-x--scroll
+        ">
+<a href="../4ca338863b78e18ed7be316a5442c116136dc5d9/" class="commit-node commit-node--full">              <p>[SKIP]: Create <code>git-read</code> GitHub Action</p>
+
+</a><a href="../e283e56ab9db463caec1798c25892960f243c167/" class="commit-node commit-node--full">              <p>[GENERATED]: Initial Commit</p>
+
+</a><a href="../a4827099fd874d21af6a763d8663a68c8bb39a5d/" class="commit-node commit-node--full">              <p>[GENERATED]: Install ActiveStorage and ActionText</p>
+
+</a><a href="../76837b7a4f684f97103935a3801d2933c9e8a8a3/" class="commit-node commit-node--full">              <p>[SKIP]: Install TailwindCSS</p>
+
+</a><a href="../9e2d38e85c981c0ce33cf9afcbc81d4d2737d72a/" class="commit-node commit-node--full">              <p>View Locations near thoughtbot NYC</p>
+
+</a><a href="../d1de1c9c506baf5f837738c2cda731824bf5e600/" class="commit-node commit-node--full">              <p>View Users and the Locations they&#39;ve added</p>
+
+</a><a href="../66eed3666d4d7cdd521a6e8651c25dad73d5213f/" class="commit-node commit-node--full">              <p>View other nearby Locations</p>
+
+</a><a href="../724da06549341f560797c808f38068c289acb486/" class="commit-node commit-node--full">              <p>View rich text Recommendations from Users</p>
+
+</a><a href="../14d1367886ac81723d171622c4faeb62e80b89e0/" class="commit-node commit-node--full">              <p>Style with TailwindCSS</p>
+
+</a><a href="../17829539ac982ef73b17fc81a9effea2de122df4/" class="commit-node commit-node--full">              <p>Mobile: Switch between Map and List</p>
+
+</a><a href="../ae1981edf75f6c8d929b515fc5cb08ce7351474c/" class="commit-node commit-node--full">              <p>Sliding drawer Search results on Mobile</p>
+
+</a><a href="../0d8a99d880a16667257bf42128641df2876cff27/" class="commit-node commit-node--full">              <p>Render the Locations on a Leaflet map</p>
+
+</a><a href="../a342e636baccee5536382e07e56c032a23b2440e/" class="commit-node commit-node--full">              <p>Pan around the map to “Search this Area”</p>
+
+</a><a href="../f008efdd2592ac182a114e618d0ad2b0a62d8988/" class="commit-node commit-node--full">              <p>Clicking on a Card pans the map</p>
+
+</a><a href="../64390d5283f533d327ab97ab56879020ee12d85a/" class="commit-node commit-node--full">              <p>[GENERATED]: Initial Commit for iOS Application</p>
+
+</a><a href="../73a4a52aa47ba34788059c759beddf7bb5ba29bb/" class="commit-node commit-node--full">              <p>Wire up Rec-It-Ralph-ios</p>
+
+</a><a href="./" class="commit-node commit-node--full" aria-current="page">              <p>Add iOS platform-specific styles</p>
+
+</a><a href="../3152b9dd2e4e2bd985bf254077790e5f39c3c75e/" class="commit-node commit-node--full">              <p>prototyping with SwiftUI: both directions</p>
+
+</a>        </nav>
+      </details>
+
+      <article class="
+        commit-content
+        commit-content--double
+        content__item
+        content__item--grow
+      ">
+        <section class="commit commit--message">
+
+          <h1 id="add-ios-platform-specific-styles">Add iOS platform-specific styles</h1>
+
+        </section>
+
+          <aside class="commit commit--diff commit--long-content">
+              <details
+  id="Gemfile"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse Gemfile</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand Gemfile</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      Gemfile
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/Gemfile b/Gemfile
+index c7686f4..9ce4ff9 100644
+</span><span class="gd">--- a/Gemfile
+</span><span class="gi">+++ b/Gemfile
+</span><span class="p">@@ -25,6 +25,7 @@</span> gem 'jbuilder', '~&gt; 2.7'
+ 
+ # Use Active Storage variant
+ gem 'image_processing', '~&gt; 1.2'
+<span class="gi">+gem 'platform_agent'
+</span> 
+ # Reduces boot times through caching; required in config/boot.rb
+ gem 'bootsnap', '&gt;= 1.4.2', require: false
+</code></pre></div></details>
+
+              <details
+  id="Gemfile.lock"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse Gemfile.lock</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand Gemfile.lock</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      Gemfile.lock
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/Gemfile.lock b/Gemfile.lock
+index 70159c3..2f87904 100644
+</span><span class="gd">--- a/Gemfile.lock
+</span><span class="gi">+++ b/Gemfile.lock
+</span><span class="p">@@ -161,6 +161,9 @@</span> GEM
+     nokogiri (1.10.10)
+       mini_portile2 (~&gt; 2.4.0)
+     pg (1.2.3)
+<span class="gi">+    platform_agent (1.0.1)
++      activesupport (&gt;= 5.2.0)
++      useragent (~&gt; 0.16.3)
+</span>     public_suffix (4.0.6)
+     puma (4.3.6)
+       nio4r (~&gt; 2.0)
+<span class="p">@@ -214,6 +217,7 @@</span> GEM
+     turbolinks-source (5.2.0)
+     tzinfo (2.0.4)
+       concurrent-ruby (~&gt; 1.0)
+<span class="gi">+    useragent (0.16.10)
+</span>     webdrivers (4.4.1)
+       nokogiri (~&gt; 1.6)
+       rubyzip (&gt;= 1.3.0)
+<span class="p">@@ -238,6 +242,7 @@</span> DEPENDENCIES
+   jbuilder (~&gt; 2.7)
+   listen (~&gt; 3.2)
+   pg (&gt;= 0.18, &lt; 2.0)
+<span class="gi">+  platform_agent
+</span>   puma (~&gt; 4.1)
+   rails!
+   sass-rails (&gt;= 6)
+</code></pre></div></details>
+
+              <details
+  id="app/controllers/application_controller.rb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/controllers/application_controller.rb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/controllers/application_controller.rb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/controllers/application_controller.rb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb
+index 09705d1..3561548 100644
+</span><span class="gd">--- a/app/controllers/application_controller.rb
+</span><span class="gi">+++ b/app/controllers/application_controller.rb
+</span><span class="p">@@ -1,2 +1,9 @@</span>
+ class ApplicationController &lt; ActionController::Base
+<span class="gi">+  before_action { request.variant = :ios if platform.ios_app? }
++
++  private
++
++  helper_method def platform
++    @platform ||= ApplicationPlatform.new(request.user_agent)
++  end
+</span> end
+</code></pre></div></details>
+
+              <details
+  id="app/javascript/packs/application.css"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/javascript/packs/application.css</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/javascript/packs/application.css</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/javascript/packs/application.css
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/javascript/packs/application.css b/app/javascript/packs/application.css
+index d46d9bc..00153b3 100644
+</span><span class="gd">--- a/app/javascript/packs/application.css
+</span><span class="gi">+++ b/app/javascript/packs/application.css
+</span><span class="p">@@ -4,6 +4,15 @@</span>
+ 
+ :root {
+   --header-height: 0px;
+<span class="gi">+  --safe-area-inset-top: env(safe-area-inset-top);
++}
++
++html {
++  -webkit-tap-highlight-color: transparent;
++}
++
++[data-bridge-platform~="ios"] {
++  --header-height: var(--safe-area-inset-top);
+</span> }
+ 
+ .top-offset {
+</code></pre></div></details>
+
+              <details
+  id="app/platforms/application_platform.rb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/platforms/application_platform.rb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/platforms/application_platform.rb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/platforms/application_platform.rb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/platforms/application_platform.rb b/app/platforms/application_platform.rb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..7198600
+</span><span class="gd">--- /dev/null
+</span><span class="gi">+++ b/app/platforms/application_platform.rb
+</span><span class="p">@@ -0,0 +1,9 @@</span>
+<span class="gi">+class ApplicationPlatform &lt; PlatformAgent
++  def ios_app?
++    match? /RecItRalph iOS/
++  end
++
++  def bridge_name
++    :ios if ios_app?
++  end
++end
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/application/_header.html+ios.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/application/_header.html+ios.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/application/_header.html+ios.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/application/_header.html+ios.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/application/_header.html+ios.erb b/app/views/application/_header.html+ios.erb
+</span><span class="p">new file mode 100644
+</span><span class="gh">index 0000000..e69de29
+</span></code></pre></div></details>
+
+              <details
+  id="app/views/layouts/application.html.erb"
+  open
+  class="file"
+>
+  <summary class="file__name">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--close"><title>Collapse app/views/layouts/application.html.erb</title>
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" role="img" class="file__toggle file__toggle--open"><title>Expand app/views/layouts/application.html.erb</title>
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+</svg>
+
+
+    <code>
+      app/views/layouts/application.html.erb
+    </code>
+  </summary>
+
+<div class="highlight"><pre class="highlight diff"><code><span class="gh">diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index 26f878d..904009d 100644
+</span><span class="gd">--- a/app/views/layouts/application.html.erb
+</span><span class="gi">+++ b/app/views/layouts/application.html.erb
+</span><span class="p">@@ -1,7 +1,7 @@</span>
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+   &lt;head&gt;
+<span class="gd">-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+</span><span class="gi">+    &lt;meta name="viewport" content="width=device-width, initial-scale=1&lt;%= ", viewport-fit=cover" if platform.ios_app? %&gt;"&gt;
+</span>     &lt;title&gt;&lt;%= yield(:document_title).presence || "Rec-it-Ralph" %&gt;&lt;/title&gt;
+     &lt;%= csrf_meta_tags %&gt;
+     &lt;%= csp_meta_tag %&gt;
+<span class="p">@@ -16,7 +16,7 @@</span>
+     &lt;%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %&gt;
+   &lt;/head&gt;
+ 
+<span class="gd">-  &lt;body class="bg-cream-lighter flex flex-col items-stretch min-h-screen"&gt;
+</span><span class="gi">+  &lt;body class="bg-cream-lighter flex flex-col items-stretch min-h-screen" data-bridge-platform="&lt;%= platform.bridge_name %&gt;"&gt;
+</span>     &lt;%= render "header" %&gt;
+ 
+     &lt;main class="flex flex-col md:flex-row relative h-screen-minus-header"&gt;
+</code></pre></div></details>
+
+          </aside>
+      </article>
+    </main>
+  </body>
+</html>
